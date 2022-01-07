@@ -1,0 +1,59 @@
+//zero stiles setup
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+// ==================================================================
+// picture stiles setup
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+// ==================================================================
+// main body stiles
+body {
+  font-family: $primary-font-family;
+  font-size: $primary-font-size;
+}
+// ==================================================================
+// main container stiles
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  min-width: 280px;
+  @media screen and (min-width: 480px) {
+    width: 480px;
+    padding: 0 20px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    padding: 0 34px;
+  }
+  @media screen and (min-width: 1024px) {
+    width: 1024px;
+    padding: 0 71px;
+  }
+}
+.container-header {
+  background-color: $header-Bg-color;
+  height: 230px;
+  padding-top: 46px;
+}
+.container-footer {
+
+}
+// ==================================================================
+//class visible hidden
+.is-hidden {
+  @extend %invisible;
+}
