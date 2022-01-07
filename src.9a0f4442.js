@@ -1,6 +1,8 @@
 parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcelRequire,u="function"==typeof require&&require;function f(t,n){if(!r[t]){if(!e[t]){var i="function"==typeof parcelRequire&&parcelRequire;if(!n&&i)return i(t,!0);if(o)return o(t,!0);if(u&&"string"==typeof t)return u(t);var c=new Error("Cannot find module '"+t+"'");throw c.code="MODULE_NOT_FOUND",c}p.resolve=function(r){return e[t][1][r]||r},p.cache={};var l=r[t]=new f.Module(t);e[t][0].call(l.exports,p,l,l.exports,this)}return r[t].exports;function p(e){return f(p.resolve(e))}}f.isParcelRequire=!0,f.Module=function(e){this.id=e,this.bundle=f,this.exports={}},f.modules=e,f.cache=r,f.parent=o,f.register=function(r,t){e[r]=[function(e,r){r.exports=t},{}]};for(var c=0;c<t.length;c++)try{f(t[c])}catch(e){i||(i=e)}if(t.length){var l=f(t[t.length-1]);"object"==typeof exports&&"undefined"!=typeof module?module.exports=l:"function"==typeof define&&define.amd?define(function(){return l}):n&&(this[n]=l)}if(parcelRequire=f,i)throw i;return f}({"clu1":[function(require,module,exports) {
 
-},{"./../images/demo.jpg":[["demo.090c7c6d.jpg","nKR3"],"nKR3"]}],"Focm":[function(require,module,exports) {
-"use strict";require("./sass/main.scss");
-},{"./sass/main.scss":"clu1"}]},{},["Focm"], null)
-//# sourceMappingURL=/Filmoteka-team-project/src.d6cd7f31.js.map
+},{"./../fonts/Roboto-Medium.eot":[["Roboto-Medium.88cbb6e0.eot","Pbrh"],"Pbrh"],"./../fonts/Roboto-Medium.woff":[["Roboto-Medium.a603c208.woff","aGep"],"aGep"],"./../fonts/Roboto-Medium.ttf":[["Roboto-Medium.f1c32734.ttf","qops"],"qops"],"./../fonts/Roboto-Medium.svg":[["Roboto-Medium.766c522f.svg","DUQj"],"DUQj"],"./../fonts/Roboto-Regular.eot":[["Roboto-Regular.c3e8c01a.eot","mvwk"],"mvwk"],"./../fonts/Roboto-Regular.woff":[["Roboto-Regular.7474817b.woff","xTI8"],"xTI8"],"./../fonts/Roboto-Regular.ttf":[["Roboto-Regular.5c3119f7.ttf","E3dE"],"E3dE"],"./../fonts/Roboto-Regular.svg":[["Roboto-Regular.21fabb5e.svg","AM97"],"AM97"]}],"rBUd":[function(require,module,exports) {
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0;var e={};exports.default=e;
+},{}],"Focm":[function(require,module,exports) {
+"use strict";require("./sass/main.scss"),require("./js/Refs");
+},{"./sass/main.scss":"clu1","./js/Refs":"rBUd"}]},{},["Focm"], null)
+//# sourceMappingURL=/Filmoteka-team-project/src.9a0f4442.js.map
