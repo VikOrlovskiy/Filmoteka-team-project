@@ -11,6 +11,9 @@ ul {
   margin: 0px;
   list-style: none;
 }
+a {
+  text-decoration: none;
+}
 // ==================================================================
 // picture stiles setup
 img {
@@ -44,7 +47,7 @@ body {
     padding: 0 71px;
   }
 }
-.container-header {
+.header__container {
   background-color: $header-Bg-color;
   height: 230px;
   padding-top: 46px;
