@@ -1,0 +1,29 @@
+<header class="header">
+    <div class="header__container container">
+      <nav class="navigation">
+        <div class="nav">
+        <a href="./index.html" lang="en" class="logo">
+            <svg class="logo-filmoteka" width="24" height="24">
+                <use href="./images/icons/symbol-defs.svg#logo-filmoteka"></use>
+              </svg>
+          <span class="logo__nav">Filmoteka</span>
+        </a>
+        <a href="./index.html" class="home-link current-link">Home</a>
+        <a href="/" class="library-link">my library</a>
+    </nav>
+    <form class="form-search">
+      
+      <input
+        class="search-input"
+        type="text"
+        name="query"
+        autocomplete="off"
+        placeholder="Поиск фильмов"
+      />
+      <button class="search-button" type="submit">
+        <svg class="icon-search"  width="12" height="12"><use href="./images/icons/symbol-defs.svg#logo-search"></use></svg>
+      </button>
+    </form>
+    <p class="error-text" id="search-error"></p>
+  </div>
+</header>

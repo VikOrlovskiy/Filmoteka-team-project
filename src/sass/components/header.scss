@@ -1,0 +1,164 @@
+.header__container {
+  // padding: 45px 0;
+    background-color: $header-Bg-color;
+  
+    height: 230px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(to top left, $header-Bg-color, $header-Bg-color),
+      url('../images/mobile/header-mobile-x1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(to top left, $header-Bg-color, $header-Bg-color),
+        url('../images/mobile/header-mobile-x2.jpg');
+    }
+  
+    @media screen and (min-width: 769px) {
+      background-image: linear-gradient(to top left, $header-Bg-color, $header-Bg-color),
+        url('../images/tablet/header-tablet-x1.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+  
+      @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: linear-gradient(to top left, $header-Bg-color, $header-Bg-color),
+          url('../images/tablet/header-tablet-x2.jpg');
+      }
+    }
+  
+    @media screen and (min-width: 1025px) {
+      background-image: linear-gradient(to top left, $header-Bg-color, $header-Bg-color),
+        url('../images/desktop/header-desktop-x1.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+  
+      @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: linear-gradient(to top left, $header-Bg-color, $header-Bg-color),
+          url('../images/desktop/header-desktop-x2.jpg');
+      }
+    }
+  }
+.nav {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 45px;
+    a {
+      color: $lite-text-color;
+      text-transform: uppercase;
+    }
+  }
+  
+  .logo {
+    margin-right: auto;
+  }
+  
+  .home-link {
+    margin-right: 40px;
+    
+  }
+  
+  
+  .logo__nav {
+    display: none;
+  
+    @media screen and (min-width: 769px) {
+      padding-left: 12px;
+      font-size: 30px;
+      line-height: 1, 17;
+      text-transform: none;
+  
+      display: inline-block;
+    }
+  }
+  .logo-filmoteka {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .form-search {
+    width: 100%;
+    position: relative;
+  
+    @media screen and (min-width: 769px) {
+      width: 336px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+  
+  .search-button {
+    position: absolute;
+    right: 0;
+    top: 2px;
+    border: none;
+    background: none;
+  }
+  
+  .icon-search {
+    width: 12px;
+    height: 12px;
+    fill: $lite-text-color;
+  }
+  
+  .search-input {
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 0.5px solid #ffffff;
+    font-size: 14px;
+    line-height: 1, 14;
+    color: #ffffff;
+    padding-right: 15px;
+  
+    &::placeholder {
+      font-size: 14px;
+      line-height: 1, 14;
+      color: $lite-text-color;
+      font-weight: 400;
+    }
+  }
+  
+  .error-text {
+    padding-top: 20px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.14;
+    color: $warning-text-color;
+  }
+  
+  .current-link {
+    position: relative;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: $acent-text-color;
+    
+    display: block;
+  }
+  
+  .current-link::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: $acent-Bg-color;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+       opacity: 1;
+  }
