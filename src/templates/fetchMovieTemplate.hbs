@@ -1,5 +1,5 @@
 {{#each this}}
-<div>
+<li>
     {{#if poster_path}}
           <img
           width="300px"
@@ -14,9 +14,10 @@
           />
         {{/if}}
     <h2>{{title}}</h2>
-    <p >{{genre_ids}}|
-     <span>{{release_date}}</span>
-    <span></span>{{vote_average}}</span>
-    </p>
-</div>
+    {{#each genres}}
+    <span> {{name}} </span>
+    {{/each}}
+     <span>|{{year}}</span>
+     <span>{{vote_average}}</span>
+</li>
 {{/each}}

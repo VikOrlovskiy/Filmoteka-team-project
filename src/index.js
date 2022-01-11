@@ -3,7 +3,7 @@ import './sass/main.scss';
 // ==========Document Refs===========
 import "./js/Refs";
 // ==========Document HEADER=========
- import "./js/ApiServise";
+ import "./js/FetchMovieServise";
 // import "./js/navigation";
 // ==========Document Auth=========
 // import "./js/fireBaseApi";
