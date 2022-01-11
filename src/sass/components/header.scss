@@ -59,9 +59,22 @@
   
   .logo {
     margin-right: auto;
+   
     
   }
+  .nav a:hover span{
+   
+      color: $acent-Bg-color;
+      transition: color 250ms $primary-animation;
+    
+  }
+  .nav a:hover svg{
+   
+    color: $acent-Bg-color;
+    transition: color 250ms $primary-animation;
   
+}
+
   .home-link {
     margin-right: 40px;
     
@@ -81,9 +94,10 @@
       
     }
   }
-  .logo__nav:hover{
+ 
+ /* .logo__nav:hover{
     color: $acent-Bg-color;
-  }
+  }*/
   .logo-filmoteka {
     width: 24px;
     height: 24px;
@@ -91,9 +105,9 @@
     cursor: pointer;
     color: #818181;
   
-    &:hover {
+   /* &:hover {
       color: $acent-Bg-color;
-    }
+    }*/
   }
   
   .form-search {
@@ -117,7 +131,7 @@
   background-repeat: no-repeat;
   border: transparent;
   color: $lite-text-color;
-  
+  cursor: pointer;
   }
   
   .icon-search {
@@ -162,6 +176,7 @@
     color: $lite-text-color;
     
     display: block;
+    transition: color 250ms $primary-animation;
     &:hover {
       color:  $acent-Bg-color;
     }
@@ -181,13 +196,15 @@
 .library-link{
   //font-size: 14px;
   color: $lite-text-color;
+  transition: color 250ms $primary-animation;
   &:hover {
     color:  $acent-Bg-color;
   }
 }
-  .site-nav__item:hover{
+  
+/*.site-nav__item:hover{
     color: $acent-Bg-color;
-  }
+  }*/
   .site-nav__list {
     display: flex;
     justify-content: flex-end;
@@ -212,6 +229,8 @@
     color:$lite-text-color;
     border: transparent;
     text-transform: uppercase;
+    cursor: pointer;
+    transition: color 250ms $primary-animation;
     &:hover {
       color:  $acent-Bg-color;
     }
