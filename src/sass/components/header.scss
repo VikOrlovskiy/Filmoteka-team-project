@@ -53,16 +53,13 @@
   }
 .nav {
     display: flex;
-    align-items: flex-end;
-    margin-bottom: 45px;
-    a {
-      color: $lite-text-color;
-      text-transform: uppercase;
-    }
+    
+    
   }
   
   .logo {
     margin-right: auto;
+    
   }
   
   .home-link {
@@ -79,38 +76,54 @@
       font-size: 30px;
       line-height: 1, 17;
       text-transform: none;
-  
+      color: $lite-text-color;
       display: inline-block;
+      
     }
+  }
+  .logo__nav:hover{
+    color: $acent-Bg-color;
   }
   .logo-filmoteka {
     width: 24px;
     height: 24px;
+    text-decoration: none;
+    cursor: pointer;
+    color: #818181;
+  
+    &:hover {
+      color: $acent-Bg-color;
+    }
   }
   
   .form-search {
     width: 100%;
     position: relative;
-  
-    @media screen and (min-width: 769px) {
+    width: 336px;
+    margin-right: auto;
+    margin-left: auto;
+   /* @media screen and (min-width: 769px) {
       width: 336px;
       margin-right: auto;
       margin-left: auto;
-    }
+    }*/
   }
   
   .search-button {
     position: absolute;
     right: 0;
     top: 2px;
-    border: none;
-    background: none;
+    background-color: transparent;
+  background-repeat: no-repeat;
+  border: transparent;
+  color: $lite-text-color;
+  
   }
   
   .icon-search {
     width: 12px;
     height: 12px;
-    fill: $lite-text-color;
+    //fill: $lite-text-color;
   }
   
   .search-input {
@@ -143,12 +156,15 @@
   .current-link {
     position: relative;
     font-weight: 500;
-    font-size: 14px;
+   // font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    color: $acent-text-color;
+    color: $lite-text-color;
     
     display: block;
+    &:hover {
+      color:  $acent-Bg-color;
+    }
   }
   
   .current-link::after {
@@ -161,4 +177,42 @@
     left: 0;
     bottom: -3px;
        opacity: 1;
+  }
+.library-link{
+  //font-size: 14px;
+  color: $lite-text-color;
+  &:hover {
+    color:  $acent-Bg-color;
+  }
+}
+  .site-nav__item:hover{
+    color: $acent-Bg-color;
+  }
+  .site-nav__list {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.17;
+    text-transform: uppercase;
+    padding-top: 12px;
+    color:$lite-text-color;
+  }
+  
+  .site-nav__item:not(:last-child) {
+    margin-right: 39px;
+  }
+  
+  
+ .site-nav__button {
+   // text-decoration: none;
+    background-color: transparent;
+    color:$lite-text-color;
+    border: transparent;
+    text-transform: uppercase;
+    &:hover {
+      color:  $acent-Bg-color;
+    }
   }
