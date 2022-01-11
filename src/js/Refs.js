@@ -8,10 +8,13 @@ export default  {
     // navigationPanel: document.querySelector('.navigation'),
     // userButtons:document.querySelector('.header-button-block'),
     // ===============search=======================================
+     onFormFilmSerch: document.querySelector('.form-search'),
+    
     // searchBlock: document.querySelector('.search'),
     // searchInput: document.querySelector('.search_input'),
     // errorTextField:document.querySelector('.search_text'),
     // =====================main====================================
+      onMainFilmSerch: document.querySelector('main'),
     // galleryRef:document.getElementById('gallery'),
     // =======================modal=================================
     // backDrop: document.querySelector('.back-drop'),
@@ -24,4 +27,3 @@ export default  {
     // footerButtonTeamModal: document.querySelector('.footer_button'),
 
   };
-  

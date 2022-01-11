@@ -1,0 +1,25 @@
+{{#each this}}
+<article>
+<li>
+    {{#if poster_path}}
+          <img
+          width="300px"
+            src='https://image.tmdb.org/t/p/w500{{poster_path}}'
+            alt='{{title}}'
+          />
+        {{else}}
+          <img
+          width="300px"
+            src='https://i.ibb.co/kQLqyLM/movie-850.png'
+            alt='no_poster'
+          />
+        {{/if}}
+    <h2>{{title}}</h2>
+    {{#each genres}}
+    <span> {{name}} </span>
+    {{/each}}
+     <span>|{{year}}</span>
+     <span>{{vote_average}}</span>
+</li>
+  </article>
+{{/each}}
