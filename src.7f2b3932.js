@@ -5,4 +5,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/Refs");
 },{"./sass/main.scss":"clu1","./js/Refs":"rBUd"}]},{},["Focm"], null)
-//# sourceMappingURL=/Filmoteka-team-project/src.e184300c.js.map
+//# sourceMappingURL=/Filmoteka-team-project/src.7f2b3932.js.map
