@@ -9,5 +9,5 @@ function onClickLibrary(e) {
     ref.onConteinerBtnLibrary.classList.remove('is-hidden');
     ref.onHeaderContainer.classList.add('header__container--library')
     ref.buttonLibrary.classList.add('current-link')
-     ref.buttonHome.classList.remove('current-link')
+    ref.buttonHome.classList.remove('current-link')
 };
