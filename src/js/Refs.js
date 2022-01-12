@@ -5,6 +5,12 @@ export default  {
     // =====================sitename===============================
     // backHomePage:document.querySelector('.name'),
     // =====================navigation panel=======================
+    buttonLibrary: document.querySelector('.library-link'),
+    buttonHome: document.querySelector('.current-link'),
+    onConteinerBtnLibrary: document.querySelector('.btns-library'),
+    onSearchInput: document.querySelector('.search-input'),
+    onButtonSearchFilm: document.querySelector('.search-button'),
+    onHeaderContainer:document.querySelector('.header__container'),
     // navigationPanel: document.querySelector('.navigation'),
     // userButtons:document.querySelector('.header-button-block'),
     // ===============search=======================================
