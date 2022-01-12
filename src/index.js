@@ -9,5 +9,6 @@ import "./js/Refs";
 // import "./js/fireBaseApi";
 // ==========Document MAIN========
 // import "./js/gallery";
+import "./js/loader";
 // ==========Document FOOTER=========
 // import "./js/footer";

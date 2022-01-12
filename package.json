@@ -28,6 +28,7 @@
   "dependencies": {
     "axios": "^0.24.0",
     "handlebars": "^4.7.7",
+    "l": "^0.6.0",
     "tui-pagination": "^3.4.1"
   }
 }

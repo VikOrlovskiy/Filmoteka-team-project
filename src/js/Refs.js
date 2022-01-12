@@ -9,7 +9,7 @@ export default  {
     // userButtons:document.querySelector('.header-button-block'),
     // ===============search=======================================
      onFormFilmSerch: document.querySelector('.form-search'),
-    
+     loader: document.querySelector('.preloader'),
     // searchBlock: document.querySelector('.search'),
     // searchInput: document.querySelector('.search_input'),
     // errorTextField:document.querySelector('.search_text'),
