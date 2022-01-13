@@ -4,7 +4,7 @@ const fetchMovieHeader = new FetchMovieHeader;
 import ref from './Refs'
 
 
-ref.onFormFilmSerch.addEventListener('submit', onSearch);
+ref.formFilmSerch.addEventListener('submit', onSearch);
 
 function onSearch (e)  {
   e.preventDefault();
@@ -19,10 +19,10 @@ function onSearch (e)  {
 };
 
 function renderMovieList(data) {
-  ref.onMainFilmSerch.insertAdjacentHTML('afterbegin', `<ul>${movieTpl(data)}</ul>`) 
+  ref.mainFilmSerch.insertAdjacentHTML('afterbegin', `<ul>${movieTpl(data)}</ul>`) 
 };
 
 function clearFetchResault() {
-  ref.onMainFilmSerch.innerHTML = "";
+  ref.mainFilmSerch.innerHTML = "";
 };
 

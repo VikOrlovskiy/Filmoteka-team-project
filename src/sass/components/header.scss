@@ -51,6 +51,58 @@
       }
     }
   }
+  .header__container--library {
+    background-color: $header-Bg-color;
+    height: 230px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(to top left, $header-Bg-color, $header-Bg-color),
+      url('../images/mobile/library-header-mobile-x1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(to top left, $header-Bg-color, $header-Bg-color),
+        url('../images/mobile/library-header-mobile-x2.jpg');
+    }
+  
+    @media screen and (min-width: 769px) {
+      background-image: linear-gradient(to top left, $header-Bg-color, $header-Bg-color),
+        url('../images/tablet/library-header-tablet-x1.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+  
+      @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: linear-gradient(to top left, $header-Bg-color, $header-Bg-color),
+          url('../images/tablet/library-header-tablet-x2.jpg');
+      }
+    }
+  
+    @media screen and (min-width: 1025px) {
+      background-image: linear-gradient(to top left, $header-Bg-color, $header-Bg-color),
+        url('../images/desktop/library-header-desktop-x1.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+  
+      @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: linear-gradient(to top left, $header-Bg-color, $header-Bg-color),
+          url('../images/desktop/library-header-desktop-x2.jpg');
+      }
+    }
+  }
+
 .nav {
     display: flex;
     
@@ -77,7 +129,7 @@
 
   .home-link {
     margin-right: 40px;
-    
+    color: $lite-text-color;
   }
   
   
