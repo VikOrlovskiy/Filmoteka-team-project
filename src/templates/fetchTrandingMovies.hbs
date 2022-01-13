@@ -1,0 +1,36 @@
+{{!-- {{#each this}}
+<div class="card">
+    <div class="card_image">
+        <img src="https://image.tmdb.org/t/p/w500/{{poster_path}}" alt="{{title}}" loading="lazy" width="250" height="200">
+    </div>
+    <div class="card_body">
+        <h2 class="card_title">{{title}}</h2>
+        <p class="card_subtitle"><span>{{release_date}}</span><span>{{genre_ids}}</span></p>
+    </div>
+</div>
+{{/each}} --}}
+{{#each this}}
+<li>
+  <article id={{id}}>
+    {{#if poster_path}}
+          <img
+          width="300px"
+            src='https://image.tmdb.org/t/p/w500{{poster_path}}'
+            alt='{{title}}'
+          />
+        {{else}}
+          <img
+          width="300px"
+            src='https://i.ibb.co/kQLqyLM/movie-850.png'
+            alt='no_poster'
+          />
+        {{/if}}
+    <h2>{{title}}</h2>
+    {{#each genres}}
+    <span> {{name}} </span>
+    {{/each}}
+     <span>|{{year}}</span>
+     </article>
+</li>
+  
+{{/each}}

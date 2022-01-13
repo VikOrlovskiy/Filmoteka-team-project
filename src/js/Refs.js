@@ -20,7 +20,7 @@ export default  {
     // errorTextField:document.querySelector('.search_text'),
     // =====================main====================================
       mainFilmSerch: document.querySelector('main'),
-    // galleryRef:document.getElementById('gallery'),
+      galleryRef: document.getElementById('gallery'),
     // =======================modal=================================
     // backDrop: document.querySelector('.back-drop'),
     // modalWindow: document.querySelector('.modal'),
