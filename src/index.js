@@ -11,6 +11,7 @@ import "./js/renderUserLibrary";
 // import "./js/fireBaseApi";
 // ==========Document MAIN========
 import "./js/FetchTrandingMovies.js";
+import "./js/renderTrandingMovies";
 // import "./js/gallery";
 // ==========Document FOOTER=========
 // import "./js/footer";
