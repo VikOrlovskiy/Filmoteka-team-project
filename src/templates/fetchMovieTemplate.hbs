@@ -1,6 +1,6 @@
 {{#each this}}
-<article>
 <li>
+  <article id={{id}}>
     {{#if poster_path}}
           <img
           width="300px"
@@ -20,6 +20,7 @@
     {{/each}}
      <span>|{{year}}</span>
      <span>{{vote_average}}</span>
+     </article>
 </li>
-  </article>
+  
 {{/each}}
