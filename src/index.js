@@ -11,5 +11,6 @@ import './js/renderUserLibrary';
 // ==========Document MAIN========
 // import "./js/gallery";
 import './js/pagination';
+import "./js/loader";
 // ==========Document FOOTER=========
 // import "./js/footer";
