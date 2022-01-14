@@ -1,7 +1,8 @@
 import FetchMovieHeader from './FetchMovie';
 import movieTpl from '../templates/fetchMovieTemplate.hbs';
 const fetchMovieHeader = new FetchMovieHeader;
-import ref from './Refs'
+import ref from './Refs';
+import { showLoader, hideLoader } from './loader'
 
 
 ref.formFilmSerch.addEventListener('submit', onSearch);
@@ -13,7 +14,7 @@ function onSearch (e)  {
   if (fetchMovieHeader.query === "") {
     clearFetchResault()
   }
-  else {
+  else {    
     fetchMovieHeader.searchfetchMovieGenres().then(renderMovieList);
   }
 };

@@ -13,8 +13,9 @@ export default  {
     // navigationPanel: document.querySelector('.navigation'),
     // userButtons:document.querySelector('.header-button-block'),
     // ===============search=======================================
+     onFormFilmSerch: document.querySelector('.form-search'),
+     loader: document.querySelector('.preloader'),
      formFilmSerch: document.querySelector('.form-search'),
-    
     // searchBlock: document.querySelector('.search'),
     // searchInput: document.querySelector('.search_input'),
     // errorTextField:document.querySelector('.search_text'),

@@ -1,4 +1,6 @@
 import axios from 'axios';
+import { showLoader, hideLoader } from './loader'
+
 
 const API_KEY = 'd63b12eb825bf781172e230d745f91db';
 
@@ -9,8 +11,9 @@ export default class ApiService {
    
   async fetchMovie() {
     const response = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${this.searchQuery}`);
-    return response.data.results   
+    return response.data.results
   }
+
   //Список жанров.
   async fetchMovieList() {
     const response = await axios.get(`https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}&query=${this.searchQuery}`)
@@ -29,7 +32,7 @@ export default class ApiService {
           .slice(0, 2).flat(): '',}
     ));
   }
-
+  
 
   
   get query() {
