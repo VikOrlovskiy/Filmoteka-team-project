@@ -22,10 +22,13 @@ function onSearch (e)  {
 };
 
 function renderMovieList(data) {
-  ref.mainFilmSerch.insertAdjacentHTML('afterbegin', `<ul>${movieTpl(data.results)}</ul>`) 
+  const dataNormalise=data.results.map(movie => ({
+    ...movie,
+      year: movie.release_date ? movie.release_date.split('-')[0] : '',}));
+  ref.galleryRef.insertAdjacentHTML('afterbegin', `<ul  class="gallery__card-set">${movieTpl(dataNormalise)}</ul>`) 
 };
 
 function clearFetchResault() {
-  ref.mainFilmSerch.innerHTML = "";
+  ref.galleryRef.innerHTML = "";
 };
 
