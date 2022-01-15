@@ -5,8 +5,8 @@ import ref from './Refs';
 function tuiPagination() {
   const options = {
     totalItems: 50,
-    itemsPerPage: 10,
-    visiblePages: 10,
+    itemsPerPage: 20,
+    visiblePages: 5,
     page: 1,
     centerAlign: false,
     firstItemClassName: 'tui-first-child',
