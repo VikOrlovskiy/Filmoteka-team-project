@@ -105,7 +105,7 @@
 
 .nav {
     display: flex;
-    
+    margin-bottom: 37px;
     
   }
   
@@ -114,7 +114,7 @@
    
     
   }
-  .nav a:hover span{
+  .nav a:hover h1{
    
       color: $acent-Bg-color;
       transition: color 250ms $primary-animation;
@@ -128,7 +128,7 @@
 }
 
   .home-link {
-    margin-right: 40px;
+    
     color: $lite-text-color;
   }
   
@@ -137,8 +137,9 @@
     display: none;
   
     @media screen and (min-width: 769px) {
-      padding-left: 12px;
-      font-size: 35px;
+      padding-left: 10px;
+      font-size: 30px;
+      font-weight: 500;
       line-height: 1,17;
       text-transform: none;
       color: $lite-text-color;
@@ -211,14 +212,21 @@
     }
   }
   
-  .error-text {
+  /*.error-text {
     padding-top: 20px;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.14;
     color: $warning-text-color;
+  }*/
+  .site-nav__link{
+   
+    color: $lite-text-color;
+    transition: color 250ms $primary-animation;
+    &:hover {
+      color:  $acent-Bg-color;
+    }
   }
-  
   .current-link {
     position: relative;
     font-weight: 500;
@@ -245,14 +253,7 @@
     bottom: -3px;
        opacity: 1;
   }
-.library-link{
-  //font-size: 14px;
-  color: $lite-text-color;
-  transition: color 250ms $primary-animation;
-  &:hover {
-    color:  $acent-Bg-color;
-  }
-}
+
   
 /*.site-nav__item:hover{
     color: $acent-Bg-color;
@@ -260,7 +261,7 @@
   .site-nav__list {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 40px;
+    
     font-family: Roboto;
     font-weight: 500;
     font-size: 14px;
@@ -277,6 +278,7 @@
   
  .site-nav__button {
    // text-decoration: none;
+   padding: 0;
     background-color: transparent;
     color:$lite-text-color;
     border: transparent;
@@ -287,3 +289,6 @@
       color:  $acent-Bg-color;
     }
   }
+
+  
+

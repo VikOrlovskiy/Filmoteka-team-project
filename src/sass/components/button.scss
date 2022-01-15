@@ -10,6 +10,9 @@
     max-width: 136px;
     text-transform: uppercase;
     cursor: pointer;
+    &:hover{
+      background-color: $acent-Bg-color;
+    }
   
     &:first-child {
       margin-right: 15px;
@@ -46,6 +49,11 @@
     &:hover .search_icon,&:focus .search_icon{
       fill:$acent-text-color; 
     }
+  }
+
+  .button-list{
+    display: flex;
+    justify-content: center;
   }
   // ===================footer==============
   .footer_button{

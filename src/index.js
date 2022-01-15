@@ -1,11 +1,10 @@
 // ==========styles=================
 import './sass/main.scss';
 // ==========Document Refs===========
-import "./js/Refs";
+import './js/Refs';
 // ==========Document HEADER=========
-import "./js/FetchMovieServise";
-import "./js/renderUserLibrary";
-
+import './js/FetchMovieServise';
+import './js/renderUserLibrary';
 // import "./js/navigation";
 // ==========Document Auth=========
 // import "./js/fireBaseApi";
@@ -13,6 +12,7 @@ import "./js/renderUserLibrary";
 import "./js/FetchTrandingMovies.js";
 import "./js/renderTrandingMovies";
 // import "./js/gallery";
+import './js/pagination';
+import "./js/loader";
 // ==========Document FOOTER=========
 // import "./js/footer";
-

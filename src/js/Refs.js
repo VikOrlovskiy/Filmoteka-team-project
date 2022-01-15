@@ -1,3 +1,4 @@
+
 export default  {
     // body: document.querySelector('body'),
     // =====================header=================================
@@ -14,13 +15,14 @@ export default  {
     // userButtons:document.querySelector('.header-button-block'),
     // ===============search=======================================
      formFilmSerch: document.querySelector('.form-search'),
-    
     // searchBlock: document.querySelector('.search'),
     // searchInput: document.querySelector('.search_input'),
     // errorTextField:document.querySelector('.search_text'),
     // =====================main====================================
       mainFilmSerch: document.querySelector('main'),
       galleryRef: document.getElementById('gallery'),
+      paginationRef: document.getElementById('tui-pagination-container'),
+      loader: document.querySelector('.preloader'),
     // =======================modal=================================
     // backDrop: document.querySelector('.back-drop'),
     // modalWindow: document.querySelector('.modal'),
@@ -30,5 +32,4 @@ export default  {
     // paginationContainer:document.getElementById('pagination'),
     // =======================footer================================
     // footerButtonTeamModal: document.querySelector('.footer_button'),
-
-  };
+};
