@@ -1,0 +1,36 @@
+<div class="film-detail">
+    <div class="film-detail__img">
+        <img src="https://image.tmdb.org/t/p/w500{{backdrop_path}}" alt="">
+    </div>
+    <div class="film-detail__information">
+        <h2 class="film-detail__title">{{original_title}}</h2>
+        <div class="film-detail__list">
+            <div class="film-detail__item">
+                <p class="film-detail__item--name">Vote / Votes</p>
+                <p class="film-detail__item--value"><span>{{vote_average}}</span>/<span>{{vote_count}}</span></p>
+            </div>
+            <div class="film-detail__item">
+                <p class="film-detail__item--name">Popularity</p>
+                <p class="film-detail__item--value">{{popularity}}</p>
+            </div>
+            <div class="film-detail__item">
+                <p class="film-detail__item--name">Original Title</p>
+                <p class="film-detail__item--value">{{original_title}}</p>
+            </div>
+            <div class="film-detail__item">
+                <p class="film-detail__item--name">Genre</p>
+                <p class="film-detail__item--value">{{genres.name}}</p>
+            </div>
+            <div class="film-detail__about">
+                <h3 class="film-detail__subtitle">About</h3>
+                <p class="film-detail__text">
+                    {{overview}}
+                </p>
+            </div>    
+        </div>
+        <div class="film-detail__btns">
+            <button class="button">add to Watched</button>
+            <button class="button">add to queue</button>
+        </div>
+    </div>
+</div>
