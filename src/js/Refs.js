@@ -20,9 +20,9 @@ export default  {
     // errorTextField:document.querySelector('.search_text'),
     // =====================main====================================
       mainFilmSerch: document.querySelector('main'),
+      galleryRef: document.getElementById('gallery'),
       paginationRef: document.getElementById('tui-pagination-container'),
       loader: document.querySelector('.preloader'),
-    // galleryRef:document.getElementById('gallery'),
     // =======================modal=================================
     // backDrop: document.querySelector('.back-drop'),
     // modalWindow: document.querySelector('.modal'),
