@@ -1,0 +1,96 @@
+.tui-pagination {
+  display: flex;
+  justify-content: center;
+}
+.tui-page-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  color: $primary-text-color;
+  font-weight: 500;
+  line-height: 16px;
+}
+.tui-page-btn:first-child,
+.tui-page-btn:last-child {
+  display: none;
+}
+
+.tui-prev {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  background-color: $footer-Bg-color;
+}
+.tui-ico-prev {
+  position: relative;
+  font-size: 0;
+  top: 20px;
+  width: 10px;
+  height: 1.33px;
+  background-color: $secondary-Bg-color;
+  left: 15px;
+  display: block;
+}
+.tui-ico-prev::before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 1.33px;
+  top: 2px;
+  right: 5px;
+  background-color: $secondary-Bg-color;
+  transform: rotate(45deg);
+}
+.tui-ico-prev::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 1.33px;
+  top: -2px;
+  right: 5px;
+  background-color: $secondary-Bg-color;
+  transform: rotate(-45deg);
+}
+.tui-is-selected {
+  background: $acent-Bg-color;
+  color: $lite-text-color;
+}
+.tui-next {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  background-color: $footer-Bg-color;
+}
+.tui-ico-next {
+  position: relative;
+  font-size: 0;
+  top: 20px;
+  width: 10px;
+  height: 1.33px;
+  background-color: $secondary-Bg-color;
+  left: 15px;
+  display: block;
+}
+.tui-ico-next::before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 1.33px;
+  top: -2px;
+  right: 0;
+  background-color: $secondary-Bg-color;
+  transform: rotate(45deg);
+}
+.tui-ico-next::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 1.33px;
+  top: 2px;
+  right: 0;
+  background-color: $secondary-Bg-color;
+  transform: rotate(-45deg);
+}

@@ -1,10 +1,10 @@
 import Pagination from 'tui-pagination';
-import 'tui-pagination/dist/tui-pagination.css';
+// import 'tui-pagination/dist/tui-pagination.css';
 import ref from './Refs';
 
 function tuiPagination() {
   const options = {
-    totalItems: 200,
+    totalItems: 50,
     itemsPerPage: 10,
     visiblePages: 10,
     page: 1,
