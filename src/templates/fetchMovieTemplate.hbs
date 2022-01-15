@@ -14,13 +14,13 @@
           />
         {{/if}}
       </div>
-    <div class="gallery__card-caption"></div>
+    <div class="gallery__card-caption">
     <h2 class="gallery__title">{{title}}</h2>
     {{#each genres}}
     <span class="gallery__text"> {{name}} </span>
     {{/each}}
      <span class="gallery__text">| {{year}}</span>
-     <span class=" gallery__card-rating">{{vote_average}}</span>
+     <span class="is-hidden gallery__card-rating">{{vote_average}}</span>
      </div>
 </li>
   
