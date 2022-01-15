@@ -4,7 +4,7 @@ import ref from './Refs';
 
 function tuiPagination() {
   const options = {
-    totalItems: 50,
+    totalItems: 100,
     itemsPerPage: 20,
     visiblePages: 5,
     page: 1,
@@ -18,7 +18,7 @@ function tuiPagination() {
   pagination.on('beforeMove', event => {
     const currentPage = event.page;
 
-    if (currentPage === 10) {
+    if (currentPage === '') {
       return false;
     }
     console.log(currentPage);
