@@ -1,17 +1,11 @@
 import refs from "./Refs.js";
-import movieCardTpl from "../templates/fetchTrandingMovies.hbs";
+import movieCardTpl from "../templates/fetchMovieTemplate.hbs";
 import FilmsApiService from "./FetchTrandingMovies.js";
 const filmsApiService = new FilmsApiService();
 
 filmsApiService.searchfetchMovieGenres().then(renderFilmCard);
 
 function renderFilmCard(data) {
-  refs.galleryRef.insertAdjacentHTML('afterbegin', `<ul>${movieCardTpl(data)}</ul>`) 
+  refs.galleryRef.insertAdjacentHTML('afterbegin', `<ul class="gallery__card-set">${movieCardTpl(data)}</ul>`) 
 };
-
-// function renderFilmCard(data) {
-        
-//         const murkup = movieCardTpl(data);
-//         refs.galleryRef.innerHTML = murkup;
-//         }
 
