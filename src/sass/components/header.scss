@@ -219,7 +219,14 @@
     line-height: 1.14;
     color: $warning-text-color;
   }*/
-  
+  .site-nav__link{
+   
+    color: $lite-text-color;
+    transition: color 250ms $primary-animation;
+    &:hover {
+      color:  $acent-Bg-color;
+    }
+  }
   .current-link {
     position: relative;
     font-weight: 500;
@@ -246,14 +253,7 @@
     bottom: -3px;
        opacity: 1;
   }
-.library-link{
-  //font-size: 14px;
-  color: $lite-text-color;
-  transition: color 250ms $primary-animation;
-  &:hover {
-    color:  $acent-Bg-color;
-  }
-}
+
   
 /*.site-nav__item:hover{
     color: $acent-Bg-color;
