@@ -1,4 +1,4 @@
-import FetchMovieHeader from './FetchMovie';
+import FetchMovieHeader from './filmServiceApi';
 import movieTpl from '../templates/fetchMovieTemplate.hbs';
 const fetchMovieHeader = new FetchMovieHeader;
 import ref from './Refs';
@@ -15,12 +15,14 @@ function onSearch (e)  {
     clearFetchResault()
   }
   else {    
-    fetchMovieHeader.searchfetchMovieGenres().then(renderMovieList);
+    fetchMovieHeader.fetchFilms().then(renderMovieList).catch(error => {
+      console.log(error.message);
+    });
   }
 };
 
 function renderMovieList(data) {
-  ref.mainFilmSerch.insertAdjacentHTML('afterbegin', `<ul>${movieTpl(data)}</ul>`) 
+  ref.mainFilmSerch.insertAdjacentHTML('afterbegin', `<ul>${movieTpl(data.results)}</ul>`) 
 };
 
 function clearFetchResault() {
