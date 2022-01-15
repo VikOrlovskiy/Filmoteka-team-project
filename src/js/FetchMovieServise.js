@@ -10,13 +10,14 @@ ref.formFilmSerch.addEventListener('submit', onSearch);
 function onSearch (e)  {
   e.preventDefault();
   fetchMovieHeader.query = e.currentTarget.elements.query.value.trim();
-  console.log( fetchMovieHeader.query)
   clearFetchResault() 
   if (fetchMovieHeader.query === "") {
     clearFetchResault()
   }
   else {    
-    fetchMovieHeader.fetchFilms().then(renderMovieList);
+    fetchMovieHeader.fetchFilms().then(renderMovieList).catch(error => {
+      console.log(error.message);
+    });
   }
 };
 
