@@ -18,9 +18,9 @@ function tuiPagination() {
   pagination.on('beforeMove', event => {
     const currentPage = event.page;
 
-    if (currentPage === '') {
-      return false;
-    }
+    // if (currentPage === 10) {
+    //   return false;
+    // }
     console.log(currentPage);
   });
 }
