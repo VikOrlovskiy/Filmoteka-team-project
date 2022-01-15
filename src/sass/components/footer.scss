@@ -13,8 +13,6 @@
     background-color: $footer-Bg-color;
     @media screen and (min-width: 769px) {
         flex-direction: row;        
-        justify-content: center;        
-        align-items: flex-start;        
         font-size: 16px;        
         padding-top: 30px;        
         padding-bottom:28px;    
@@ -29,7 +27,10 @@
 }
 
 .footer__info-text{
-    margin-bottom: 10px;
+    @media screen and (max-width:768px) {
+        margin-bottom: 10px;
+        
+    }
 }
 
 .footer__info-team{    
@@ -40,26 +41,36 @@
 
 .icon-heart {   
     fill:$acent-Bg-color;
-    margin-left:10px;    
-    margin-right:10px;    
+    margin-left:13px;    
+    margin-right:13px;    
+    padding-bottom: 1px;
+    opacity: 0.5;
     animation: ping 1.5s cubic-bezier(.36,1.83,.8,-0.99) infinite;    
     
     @media screen and (min-width:768px) {       
-        margin-left:7px;        
-        margin-right:7px;        
+        margin-left:10px;        
+        margin-right:10px;        
     }
 }
 @keyframes ping {  
     75%, 100% {    
         transform: scale(1.6);    
-        opacity: 0.5; 
+        opacity: 1; 
     }
 }
 
 .team-button{    
+    font-family: 'Roboto';
+    font-size: 14px;
     color: $secondary-text-color;    
     text-decoration: underline;  
     border: none;
     background-color: $footer-Bg-color;
     text-align: center;
+    cursor: pointer;
+
+    &:hover {
+        color: $acent-text-color;
+        transition: color 250ms $primary-animation;
+    }
 }
