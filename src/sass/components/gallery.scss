@@ -49,6 +49,14 @@
 
 .gallery__image {
   border-radius: 5px;
+  width: 280px;
+  height: 398px;
+  @media screen and (min-width: 768px) {
+    width: 293px;
+  }
+  @media screen and (min-width: 1024px) {
+    width: 274px;
+  }
 }
 
 .gallery__title {
@@ -69,7 +77,6 @@
 .gallery__card-thumb,
 .gallery__card-caption {
   width: 280px;
-
   @media screen and (min-width: 768px) {
     width: 293px;
   }
