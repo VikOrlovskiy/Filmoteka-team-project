@@ -1,5 +1,6 @@
 {{#each this}}
-<li class="gallery__card list" id={{id}}>
+<li class="gallery__card">
+  <article id={{id}}>
     {{#if poster_path}}
           <div class="gallery__card-thumb">
           <img
@@ -15,13 +16,16 @@
         {{/if}}
       </div>
     <div class="gallery__card-caption">
-    <h2 class="gallery__title">{{title}}</h2>
-    {{#each genres}}
-    <span class="gallery__text"> {{name}} </span>
-    {{/each}}
-     <span class="gallery__text">| {{year}}</span>
-     <span class="is-hidden gallery__card-rating">{{vote_average}}</span>
+      <h2 class="gallery__title">{{title}}</h2>
+      <p class="gallery__text">
+        {{#each genres}}
+        {{name}} 
+        {{/each}}
+        <span class="gallery__year">| {{year}}</span>
+        <span class="gallery__card-rating">{{vote_average}}</span>
+      </p>
      </div>
+  </article>   
 </li>
   
 {{/each}}
