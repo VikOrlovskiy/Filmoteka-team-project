@@ -3,7 +3,7 @@ import movieTpl from '../templates/fetchMovieTemplate.hbs';
 const fetchMovieHeader = new FetchMovieHeader;
 import ref from './Refs';
 import { showLoader, hideLoader } from './loader'
-
+import renderPopUpContent from './renderPopUpContent';
 
 ref.formFilmSerch.addEventListener('submit', onSearch);
 
@@ -15,7 +15,7 @@ function onSearch (e)  {
     clearFetchResault()
   }
   else {    
-    fetchMovieHeader.fetchFilms().then(renderMovieList).catch(error => {
+    fetchMovieHeader.fetchFilms().then(renderMovieList).then(renderPopUpContent).catch(error => {
       console.log(error.message);
     });
   }
