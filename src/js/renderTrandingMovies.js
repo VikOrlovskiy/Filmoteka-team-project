@@ -1,11 +1,17 @@
-import refs from "./Refs.js";
-import movieCardTpl from "../templates/fetchMovieTemplate.hbs";
-import FilmsApiService from "./FetchTrandingMovies.js";
-const filmsApiService = new FilmsApiService();
+import DataFetch from './filmServiceApi'
+import { renderMovieCardFilms } from './normaliseRenderFilm';
+const dataFetch = new DataFetch();
 
-filmsApiService.searchfetchMovieGenres().then(renderFilmCard);
+window.addEventListener('load', onloadPopularFilms);
 
-function renderFilmCard(data) {
-  refs.galleryRef.insertAdjacentHTML('afterbegin', `<ul class="gallery__card-set">${movieCardTpl(data)}</ul>`) 
-};
+async function onloadPopularFilms() {
+  await DataFetch.fetchGenres();
+  await dataFetch
+    .fetchTopFilms()
+    .then(renderMovieCardFilms)
+    .catch(error => {
+      console.log(error.message);
+    });
+}
+
 

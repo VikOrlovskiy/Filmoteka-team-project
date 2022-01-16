@@ -1,10 +1,10 @@
-{{#each this}}
+
 <li class="gallery__card list" id={{id}}>
     {{#if poster_path}}
           <div class="gallery__card-thumb">
           <img
             class="gallery__image"
-            src='https://image.tmdb.org/t/p/w500{{poster_path}}'
+            src='https://image.tmdb.org/t/p/w500{{poster_path}} '
             alt='{{title}}'
           />
         {{else}}
@@ -16,13 +16,10 @@
         {{/if}}
       </div>
     <div class="gallery__card-caption">
-    <h2 class="gallery__title">{{title}}</h2>
-    {{#each genres}}
-    <span class="gallery__text"> {{name}} </span>
-    {{/each}}
+    <h2 class="gallery__title">{{original_title}}</h2>
+    <span class="gallery__text"> {{genre}} </span>
      <span class="gallery__text">| {{year}}</span>
-     <span class="is-hidden gallery__card-rating">{{vote_average}}</span>
+     <span class="gallery__card-rating">{{vote_average}}</span>
      </div>
 </li>
   
-{{/each}}
