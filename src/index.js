@@ -12,7 +12,9 @@ import './js/renderUserLibrary';
 import "./js/FetchTrandingMovies.js";
 import "./js/renderTrandingMovies";
 // import "./js/gallery";
+import "./js/FetchMovieInformation";
 import './js/pagination';
 import "./js/loader";
+
 // ==========Document FOOTER=========
 // import "./js/footer";

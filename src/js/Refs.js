@@ -24,10 +24,10 @@ export default  {
       paginationRef: document.getElementById('tui-pagination-container'),
       loader: document.querySelector('.preloader'),
     // =======================modal=================================
-    // backDrop: document.querySelector('.back-drop'),
-    // modalWindow: document.querySelector('.modal'),
-    // modalButtonClose:document.querySelector('.modal_close'),
-    // modalContentContainer: document.querySelector('.container-modal'),
+      galleryCard: document.querySelectorAll('.gallery__card'),
+      backdrop: document.querySelector('.backdrop'),
+      backdropBtnClose: document.querySelector('.btn-close'),
+      popUp: document.querySelector('.pop-up'),
     // =======================pagination============================
     // paginationContainer:document.getElementById('pagination'),
     // =======================footer================================
