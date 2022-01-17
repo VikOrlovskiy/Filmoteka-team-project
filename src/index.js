@@ -9,7 +9,6 @@ import './js/renderUserLibrary';
 // ==========Document Auth=========
 // import "./js/fireBaseApi";
 // ==========Document MAIN========
-import "./js/FetchTrandingMovies.js";
 import "./js/renderTrandingMovies";
 // import "./js/gallery";
 import './js/pagination';

@@ -1,28 +1,19 @@
-{{#each this}}
-<li class="gallery__card list" id={{id}}>
-    {{#if poster_path}}
-          <div class="gallery__card-thumb">
+<li class="gallery__card list" >
+  <article id={{id}}>      
+    <div class="gallery__card-thumb">
           <img
             class="gallery__image"
             src='https://image.tmdb.org/t/p/w500{{poster_path}}'
-            alt='{{title}}'
+            alt='{{original_title}}'
           />
-        {{else}}
-          <img
-            class="gallery__image"
-            src='https://i.ibb.co/NjvMgv7/poster.png'
-            alt='no_poster'
-          />
-        {{/if}}
-      </div>
+    </div>
     <div class="gallery__card-caption">
-    <h2 class="gallery__title">{{title}}</h2>
-    {{#each genres}}
-    <span class="gallery__text"> {{name}} </span>
-    {{/each}}
-     <span class="gallery__text">| {{year}}</span>
-     <span class="is-hidden gallery__card-rating">{{vote_average}}</span>
+      <h2 class="gallery__title">{{original_title}}</h2>
+      <p class="gallery__text"> {{filmGenry}}
+        <span class="gallery__text">| {{changedYear}}</span>
+        <span class="gallery__card-rating">{{vote_average}}</span>
+      </p>
      </div>
+  </article>   
 </li>
   
-{{/each}}
