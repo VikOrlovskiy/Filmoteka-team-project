@@ -8,21 +8,54 @@ export default function listenerPopUp(){
   
   const refs={
     items:document.querySelectorAll('.gallery__card'),
+
+    gallery:document.querySelector('.gallery__card-set')
   } 
-    refs.items.forEach(item => {
-      item.addEventListener('click', onOpenPopUp);
-      });
-      ref.backdropBtnClose.addEventListener('click', clickBtnClose);
-      ref.backdrop.addEventListener('click', onClickPopUp);
+    // refs.items.forEach(item => {
+    //   item.addEventListener('click', onOpenPopUp);
+    //   });
+    
+      // ref.backdropBtnClose.addEventListener('click', clickBtnClose);
+      // ref.backdrop.addEventListener('click', onClickPopUp);
+      refs.gallery.addEventListener('click', onOpenPopUpTest)
   }
   
   // function open Pop-Up
-  function onOpenPopUp(e) {
+  // function onOpenPopUp(e) {
+  //   let id
+  //   e.preventDefault();
+
+  //   ref.backdropBtnClose.addEventListener('click', clickBtnClose);
+  //   ref.backdrop.addEventListener('click', onClickPopUp);
+
+  //   window.addEventListener('keydown', onEscKeyDown);
+  //   if(e.currentTarget.parentNode.classList.contains('gallery__card-set')){
+  //     id = e.currentTarget.dataset.id
+  //     document.body.classList.add('show-modal');
+  //     fetchById(id).then(renderFilmCard)
+  //     return
+  //   }
+  //   if(e.currentTarget.parentNode){
+  //     id = e.currentTarget.dataset.id
+  //     document.body.classList.add('show-modal');
+  //     fetchById(id).then(renderFilmCard)
+  //   }
+  // }
+
+
+  function onOpenPopUpTest(e) {
     let id
     e.preventDefault();
+
+    ref.backdropBtnClose.addEventListener('click', clickBtnClose);
+    ref.backdrop.addEventListener('click', onClickPopUp);
     window.addEventListener('keydown', onEscKeyDown);
-    if(e.currentTarget.parentNode.classList.contains('gallery__card-set')){
-      id = e.currentTarget.dataset.id
+
+
+    console.log(e.target.parentNode.parentNode)
+    console.log(e.currentTarget)
+    if(e.target.parentNode.parentNode.classList.contains('gallery__card')){
+      id = e.target.parentNode.parentNode.dataset.id
       document.body.classList.add('show-modal');
       fetchById(id).then(renderFilmCard)
       return
