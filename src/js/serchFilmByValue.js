@@ -1,7 +1,6 @@
-import FetchMovieHeader from './filmServiceApi';
-import movieTpl from '../templates/fetchMovieTemplate.hbs';
+import DataFetch from "./filmServiceApi.js";
 import { renderMovieCardFilms } from './normaliseRenderFilm';
-const fetchMovieHeader = new FetchMovieHeader;
+const dataFetch = new DataFetch();
 import ref from './Refs';
 import { showLoader, hideLoader } from './loader'
 
@@ -10,13 +9,13 @@ ref.formFilmSerch.addEventListener('submit', onSearch);
 
 function onSearch (e)  {
   e.preventDefault();
-  fetchMovieHeader.query = e.currentTarget.elements.query.value.trim();
+  dataFetch.query = e.currentTarget.elements.query.value.trim();
   clearFetchResault() 
-  if (fetchMovieHeader.query === "") {
+  if (DataFetch.query === "") {
     clearFetchResault()
   }
   else {    
-    fetchMovieHeader
+    dataFetch
       .fetchFilms()
       .then(renderMovieCardFilms)
       .catch(error => {
