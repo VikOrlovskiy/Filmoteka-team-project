@@ -1,6 +1,10 @@
 <div class="film-detail">
     <div class="film-detail__img">
-        <img src="https://image.tmdb.org/t/p/w500{{backdrop_path}}" alt="">
+        {{#if backdrop_path}}
+            <img src="https://image.tmdb.org/t/p/w500{{backdrop_path}}" alt="">
+        {{else}}
+          <img src="https://image.tmdb.org/t/p/w500{{poster_path}}" alt="">
+        {{/if}}
     </div>
     <div class="film-detail__information">
         <h2 class="film-detail__title">{{original_title}}</h2>
@@ -19,7 +23,11 @@
             </div>
             <div class="film-detail__item">
                 <p class="film-detail__item--name">Genre</p>
-                <p class="film-detail__item--value">{{genres.name}}</p>
+                <p class="film-detail__item--value">
+                    {{#each genres}}
+                    <span> {{name}} </span>
+                    {{/each}}
+                </p>
             </div>
             <div class="film-detail__about">
                 <h3 class="film-detail__subtitle">About</h3>
