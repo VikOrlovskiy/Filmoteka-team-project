@@ -14,6 +14,10 @@ export default  {
     // =======================pagination============================
     paginationRef: document.getElementById('tui-pagination-container'),
     // =======================modal=================================
+      galleryCard: document.querySelectorAll('.gallery__card'),
+      backdrop: document.querySelector('.backdrop'),
+      backdropBtnClose: document.querySelector('.btn-close'),
+      popUp: document.querySelector('.pop-up'),
     // backDrop: document.querySelector('.back-drop'),
     // modalWindow: document.querySelector('.modal'),
     // modalButtonClose:document.querySelector('.modal_close'),
