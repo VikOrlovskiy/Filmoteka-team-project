@@ -90,4 +90,4 @@ var t;!function(e,n){"object"==typeof exports&&"object"==typeof module?module.ex
 },{"tui-pagination":"jPMh","./Refs":"rBUd"}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/Refs"),require("./js/serchFilmByValue"),require("./js/renderUserLibrary"),require("./js/gallery"),require("./js/pagination"),require("./js/loader");
 },{"./sass/main.scss":"clu1","./js/Refs":"rBUd","./js/serchFilmByValue":"MWR7","./js/renderUserLibrary":"G9xq","./js/gallery":"chxP","./js/pagination":"o8lo","./js/loader":"vQE2"}]},{},["Focm"], null)
-//# sourceMappingURL=/Filmoteka-team-project/src.fb12cdd6.js.map
+//# sourceMappingURL=/Filmoteka-team-project/src.5fd238a8.js.map
