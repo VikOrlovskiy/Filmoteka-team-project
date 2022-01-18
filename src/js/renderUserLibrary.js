@@ -11,5 +11,5 @@ function onClickLibrary(e) {
     ref.buttonHome.classList.remove('current-link')
 };
 
-//refs.backHomePage.addEventListener('click' , onClickReloadPage)
-//function onClickReloadPage(e){location.reload()}
+ref.backHomePage.addEventListener('click' , onClickReloadPage)
+function onClickReloadPage(){location.reload()}
