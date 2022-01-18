@@ -1,6 +1,7 @@
 export default {
   // body: document.querySelector('body'),
   // =====================navigation panel=======================
+  backHomePage:document.querySelector('.home'),
   buttonLibrary: document.querySelector('.library-link'),
   buttonHome: document.querySelector('.current-link'),
   conteinerBtnLibrary: document.querySelector('.btns-library'),

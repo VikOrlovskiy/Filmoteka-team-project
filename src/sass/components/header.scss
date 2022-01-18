@@ -190,7 +190,11 @@
   .icon-search {
     width: 12px;
     height: 12px;
-    //fill: $lite-text-color;
+    fill: $lite-text-color;
+    &:hover{
+      fill: $acent-text-color;
+      transition: fill 250ms $primary-animation;
+    }
   }
   
   .search-input {
@@ -203,6 +207,10 @@
     line-height: 1, 14;
     color: #ffffff;
     padding-right: 15px;
+    &:hover,&:focus{
+      border-bottom: 1px solid $acent-text-color;
+      transition: border-bottom 250ms $primary-animation;
+    }
   
     &::placeholder {
       font-size: 14px;
