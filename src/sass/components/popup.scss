@@ -1,5 +1,5 @@
 body.show-modal {
-    overflow-y: hidden;
+    // overflow-y: hidden;
     & .backdrop {
       opacity: 1;
       visibility: visible;
@@ -18,14 +18,14 @@ body.show-modal {
     padding: 50px 0;
     background-color: rgba(0, 0, 0, 0.25);
     pointer-events: none;
-    overflow-y: scroll;
+    // overflow-y: scroll;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
     @media screen and (min-width: 768px) {
       padding: 0;
     }
   }
   
-  .pop-up {
+  .pop-up__wrapper {
     position: relative;
     width: fit-content;
     left: 50%;

@@ -10,3 +10,6 @@ function onClickLibrary(e) {
     ref.buttonLibrary.classList.add('current-link')
     ref.buttonHome.classList.remove('current-link')
 };
+
+//refs.backHomePage.addEventListener('click' , onClickReloadPage)
+//function onClickReloadPage(e){location.reload()}
