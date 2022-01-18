@@ -14,6 +14,5 @@ async function loadTrendingFilms() {
   });
   tuiPagination();
 }
-  await renderPopUpContent;
-};
+  // await renderPopUpContent;
 
