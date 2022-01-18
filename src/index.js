@@ -8,8 +8,8 @@ import './js/renderUserLibrary';
 // ==========Document Auth=========
 // import "./js/fireBaseApi";
 // ==========Document MAIN========
-import "./js/gallery";
-import './js/pagination';
-import "./js/loader";
+import './js/gallery';
+import './js/paginationGallery';
+import './js/loader';
 // ==========Document FOOTER=========
 // import "./js/footer";
