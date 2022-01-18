@@ -1,3 +1,4 @@
+
 export default {
   // body: document.querySelector('body'),
   // =====================navigation panel=======================
@@ -17,10 +18,10 @@ export default {
   // =======================pagination============================
   paginationRef: document.getElementById('tui-pagination-container'),
   // =======================modal=================================
-  // backDrop: document.querySelector('.back-drop'),
-  // modalWindow: document.querySelector('.modal'),
-  // modalButtonClose:document.querySelector('.modal_close'),
-  // modalContentContainer: document.querySelector('.container-modal'),
+  gallery: document.querySelector('.gallery__card-set'),
+  backdrop: document.querySelector('.backdrop'),
+  backdropBtnClose: document.querySelector('.btn-close'),
+  popUp: document.querySelector('.pop-up'),
   // =======================footer================================
   // footerButtonTeamModal: document.querySelector('.footer_button'),
 };
