@@ -11,6 +11,6 @@ async function loadTrendingFilms() {
   await dataFetch.fetchTopFilms().then(films => {
     renderMovieCardFilms(films)
   });
-  await renderPopUpContent();
+  await renderPopUpContent;
 };
 
