@@ -16,6 +16,20 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 const db = getDatabase();
 //=================  Firebase functions ===================================================
+// ========== Auth State ====================
+function authState(){
+  onAuthStateChanged(auth, (user) => {
+      if (user) {
+          const uid = user.uid;
+          console.log(uid)
+          console.log(user.email)
+          localStorage.setItem('userId',uid)
+          // console.log(user.accessToken)
+      } else {
+        console.log('no user')
+      }
+    });
+  }
 // ==========login to Firebase====================
 function RegistrationWithEmailAndPassword(email, password) {
     createUserWithEmailAndPassword(auth, email, password)
@@ -47,6 +61,12 @@ function authWithEmailAndPassword(email, password) {
         console.log(errorCode)
       });
     }
+// ========== log out====================
+    function logOutAuthUser(){
+      localStorage.clear()
+      console.log('userOut')
+      // signOut(auth)
+    }
 // ========== write User Data to Firebase====================
 function writeUserData(userId, Collection) {
     set(ref(db, 'users/' + userId), {
@@ -66,4 +86,4 @@ function writeUserData(userId, Collection) {
         console.error(error);
       });
   }
-export{authWithEmailAndPassword,RegistrationWithEmailAndPassword,readUserData,writeUserData}
+export{authWithEmailAndPassword,RegistrationWithEmailAndPassword,readUserData,writeUserData,logOutAuthUser,authState}
