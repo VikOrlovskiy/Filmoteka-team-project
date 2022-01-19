@@ -8,6 +8,9 @@ export default {
   conteinerBtnLibrary: document.querySelector('.btns-library'),
   searchForm: document.querySelector('.form-header'),
   headerContainer: document.querySelector('.header__container'),
+  // ===============user buttons=======================================
+  logInButton:document.querySelector('#form-open'),
+  logOutButton:document.querySelector('#logOut'),
   // ===============search=======================================
   formFilmSerch: document.querySelector('.form-search'),
   inputFilmSerch: document.querySelector('.search-input'),
