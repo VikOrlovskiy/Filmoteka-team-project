@@ -17,13 +17,11 @@ function actionPopUp(){
   
   // function Click Btn
   function clickBtnClose(e) {
-    e.preventDefault();
     onClosePopUp();
   }
   
   // function Click Backdrop
   function onClickPopUp(e) {
-    e.preventDefault();
     if (e.target == e.currentTarget) {
       onClosePopUp();
     }
