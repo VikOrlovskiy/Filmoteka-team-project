@@ -11,6 +11,7 @@ import './js/userFunctions';
 // ==========Document MAIN========
 import './js/gallery';
 import './js/paginationGallery';
+import './js/paginationSerchFilm';
 import './js/loader';
 // ==========Document FOOTER=========
 // import "./js/footer";
