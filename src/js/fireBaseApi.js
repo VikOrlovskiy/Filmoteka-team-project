@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getAuth,createUserWithEmailAndPassword, signInWithEmailAndPassword,onAuthStateChanged , deleteUser} from 'firebase/auth';
+import { getAuth,createUserWithEmailAndPassword, signInWithEmailAndPassword,onAuthStateChanged,signOut} from 'firebase/auth';
 import { getDatabase, ref, set, child, get  } from "firebase/database";
 //================== Your web app's Firebase configuration ================================
 const firebaseConfig = {
@@ -65,7 +65,7 @@ function authWithEmailAndPassword(email, password) {
     function logOutAuthUser(){
       localStorage.clear()
       console.log('userOut')
-      // signOut(auth)
+      signOut(auth)
     }
 // ========== write User Data to Firebase====================
 function writeUserData(userId, Collection) {
