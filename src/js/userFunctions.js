@@ -11,11 +11,11 @@ Refs.logInButton.addEventListener('click' , onClickregistrationOrlogInUser)
 authState()
 
 function onClickregistrationOrlogInUser(){
+    renderForm(formLogIn)
     Refs.popUp.classList.add("modal_form")
     document.body.classList.add('show-modal');
-    renderForm(formLogIn)
-    let form = document.querySelector('.form')
-    form.addEventListener('submit', onSubmitEntryForm)
+    let form =  document.querySelector('.form')
+    form.addEventListener('submit',onSubmitEntryForm)
     form.querySelector('.to_signup').addEventListener('click',onRegistrationLinkClick)
     actionPopUp()
 }
@@ -27,11 +27,9 @@ function onSubmitEntryForm(e){
     e.preventDefault()
     const email = e.target.querySelector('#email').value;
     const password = e.target.querySelector('#password').value;
-    // authWithEmailAndPassword(email, password);
-    // this.reset()
-    // Refs.body.classList.remove("modal-open")
-    // Refs.backDrop.classList.add('is-hidden')
-    // Refs.modalWindow.classList.remove("modal_form")
+    authWithEmailAndPassword(email, password);
+    this.reset()
+    document.body.classList.remove('show-modal');
     Refs.popUp.innerHTML="" ;
     console.log(email,password)
 }
@@ -40,18 +38,16 @@ function onSubmitRegistrationForm(e){
     const email = e.target.querySelector('#email').value;
     const password = e.target.querySelector('#password').value;
     const passwordConfirm = e.target.querySelector('#passwordConfirm').value;
-    // RegistrationWithEmailAndPassword(email, password);
+    RegistrationWithEmailAndPassword(email, password);
     this.reset()
-    // Refs.body.classList.remove("modal-open")
-    // Refs.backDrop.classList.add('is-hidden')
-    // Refs.modalWindow.classList.remove("modal_form")
+    document.body.classList.remove('show-modal');
     Refs.popUp.innerHTML="" ;
     console.log(email,password,passwordConfirm)
 }
 function onRegistrationLinkClick(e){
     Refs.popUp.innerHTML="" ;
     renderForm(formRegistration)
-    // let form = document.querySelector('.form')
-    // form.addEventListener('submit', onSubmitRegistrationForm)
+    let form = document.querySelector('.form')
+    form.addEventListener('submit', onSubmitRegistrationForm)
 }
 export{onSubmitRegistrationForm,onSubmitEntryForm,renderForm,onRegistrationLinkClick}
