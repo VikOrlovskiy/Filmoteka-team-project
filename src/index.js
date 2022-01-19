@@ -3,9 +3,9 @@ import './sass/main.scss';
 // ==========Document Refs===========
 import './js/Refs';
 // ==========Document HEADER=========
+import './js/userFunctions';
 import './js/serchFilmByValue';
 import './js/renderUserLibrary';
-import './js/userFunctions';
 // ==========Document Auth=========
 // import "./js/fireBaseApi";
 // ==========Document MAIN========
