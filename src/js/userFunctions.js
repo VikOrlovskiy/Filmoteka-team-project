@@ -4,7 +4,6 @@ import {actionPopUp} from './actionPopUp'
 import formLogIn from '../templates/formLogIn.hbs';
 import formRegistration from '../templates/formRegistration.hbs';
 // ==================logOut========================
-console.log(Refs.logOutButton)
 Refs.logOutButton.addEventListener('click' , logOutAuthUser)
 // ==================LogIn========================
 Refs.logInButton.addEventListener('click' , onClickregistrationOrlogInUser)
@@ -28,8 +27,8 @@ function onSubmitEntryForm(e){
     e.preventDefault()
     const email = e.target.querySelector('#email').value;
     const password = e.target.querySelector('#password').value;
-    authWithEmailAndPassword(email, password);
-    this.reset()
+    // authWithEmailAndPassword(email, password);
+    // this.reset()
     // Refs.body.classList.remove("modal-open")
     // Refs.backDrop.classList.add('is-hidden')
     // Refs.modalWindow.classList.remove("modal_form")
@@ -52,7 +51,7 @@ function onSubmitRegistrationForm(e){
 function onRegistrationLinkClick(e){
     Refs.popUp.innerHTML="" ;
     renderForm(formRegistration)
-    let form = document.querySelector('.form')
-    form.addEventListener('submit', onSubmitRegistrationForm)
+    // let form = document.querySelector('.form')
+    // form.addEventListener('submit', onSubmitRegistrationForm)
 }
 export{onSubmitRegistrationForm,onSubmitEntryForm,renderForm,onRegistrationLinkClick}
