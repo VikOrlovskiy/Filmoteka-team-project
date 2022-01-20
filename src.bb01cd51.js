@@ -132,4 +132,4 @@ var t;!function(e,n){"object"==typeof exports&&"object"==typeof module?module.ex
 },{"tui-pagination":"jPMh","./Refs":"rBUd","./filmServiceApi.js":"c2O5","./normaliseRenderFilm":"YBaZ"}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/Refs"),require("./js/userFunctions"),require("./js/serchFilmByValue"),require("./js/renderUserLibrary"),require("./js/gallery"),require("./js/paginationGallery"),require("./js/paginationSerchFilm"),require("./js/loader");
 },{"./sass/main.scss":"clu1","./js/Refs":"rBUd","./js/userFunctions":"nh4p","./js/serchFilmByValue":"MWR7","./js/renderUserLibrary":"G9xq","./js/gallery":"chxP","./js/paginationGallery":"njxD","./js/paginationSerchFilm":"TX5N","./js/loader":"vQE2"}]},{},["Focm"], null)
-//# sourceMappingURL=/Filmoteka-team-project/src.c2dfbc32.js.map
+//# sourceMappingURL=/Filmoteka-team-project/src.bb01cd51.js.map
