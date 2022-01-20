@@ -15,6 +15,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 const db = getDatabase();
+const dbRef = ref(getDatabase());
 //=================  Firebase functions ===================================================
 // ========== Auth State ====================
 function authState(){
@@ -67,14 +68,16 @@ function authWithEmailAndPassword(email, password) {
     }
 // ========== write User Data to Firebase====================
 function writeUserData(userId, Collection) {
+  console.log('ok')
     set(ref(db, 'users/' + userId), {
       queue:Collection,
       Watched:Collection,
     });
   }
 // ========== read User Data to Firebase====================
+let dataUser = JSON.parse(localStorage.getItem('userData'))
   function readUserData(userId){
-    get(child(db, `users/${userId}`)).then((data) => {
+    get(child(dbRef, `users/${userId}`)).then((data) => {
         if (data.exists()) {
           console.log(data.val());
         } else {
