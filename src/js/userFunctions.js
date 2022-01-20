@@ -30,7 +30,6 @@ function onSubmitEntryForm(e){
     this.reset()
     document.body.classList.remove('show-modal');
     Refs.popUp.innerHTML="" ;
-    console.log(email,password)
 }
 function onSubmitRegistrationForm(e){
     e.preventDefault()
@@ -41,7 +40,6 @@ function onSubmitRegistrationForm(e){
     this.reset()
     document.body.classList.remove('show-modal');
     Refs.popUp.innerHTML="" ;
-    console.log(email,password,passwordConfirm)
 }
 function onRegistrationLinkClick(e){
     Refs.popUp.innerHTML="" ;
