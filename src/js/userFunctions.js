@@ -71,7 +71,7 @@ if(dataUser !== null){
 //       .then(data => console.log(data));
 //   }
   if(dataUser !== null){
-    readUserData(Number(dataUser.uid))
+    readUserData(dataUser.uid)
        readFromFBHundler(dataUser.accessToken,'films',dataUser.uid)
 }
 
