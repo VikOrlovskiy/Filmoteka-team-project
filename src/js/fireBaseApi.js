@@ -75,7 +75,6 @@ function writeUserData(userId, Collection) {
     });
   }
 // ========== read User Data to Firebase====================
-let dataUser = JSON.parse(localStorage.getItem('userData'))
   function readUserData(userId){
     get(child(dbRef, `users/${userId}`)).then((data) => {
         if (data.exists()) {
