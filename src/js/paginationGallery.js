@@ -16,7 +16,6 @@ function tuiPagination() {
   };
 
   const pagination = new Pagination(refs.paginationRef, options);
-
   pagination.reset();
   pagination.on('beforeMove', function (eventData) {
     dataFetch.page = eventData.page;
