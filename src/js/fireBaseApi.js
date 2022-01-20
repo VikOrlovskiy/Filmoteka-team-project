@@ -21,12 +21,8 @@ const dbRef = ref(getDatabase());
 function authState(){
   onAuthStateChanged(auth, (user) => {
       if (user) {
-          const uid = user.uid;
-          console.log(uid)
-          console.log(user.email)
           let userData = {'accessToken':user.accessToken ,'uid': user.uid}
           localStorage.setItem('userData', JSON.stringify(userData));
-          console.log(user.accessToken)
       } else {
         console.log('no user')
       }
@@ -36,7 +32,6 @@ function authState(){
 function RegistrationWithEmailAndPassword(email, password) {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        // Signed in 
        console.log('RegistrationWithEmailAndPassword')
       })
       .catch((error) => {
@@ -50,7 +45,6 @@ function RegistrationWithEmailAndPassword(email, password) {
 function authWithEmailAndPassword(email, password) {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        // Signed in 
         console.log('authWithEmailAndPassword')
       })
       .catch((error) => {
@@ -63,12 +57,11 @@ function authWithEmailAndPassword(email, password) {
 // ========== log out====================
     function logOutAuthUser(){
       localStorage.clear()
-      console.log('userOut')
       signOut(auth)
     }
 // ========== write User Data to Firebase====================
 function writeUserData(userId, Collection) {
-  console.log('ok')
+  console.log('write')
     set(ref(db, 'users/' + userId), {
       queue:Collection,
       Watched:Collection,
@@ -78,7 +71,7 @@ function writeUserData(userId, Collection) {
   function readUserData(userId){
     get(child(dbRef, `users/${userId}`)).then((data) => {
         if (data.exists()) {
-          console.log(data.val());
+          console.log('read', data.val());
         } else {
           console.log("No data available");
         }
