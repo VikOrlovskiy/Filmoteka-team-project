@@ -51,7 +51,6 @@ function onRegistrationLinkClick(e){
 }
 export{onSubmitRegistrationForm,onSubmitEntryForm,renderForm,onRegistrationLinkClick}
 let dataUser = JSON.parse(localStorage.getItem('userData'))
-console.log(dataUser.uid)
 if(dataUser !== null){
     writeUserData(dataUser.uid,[34545667788,345678,34324234])
     // writeToFBHundler(dataUser.accessToken,'films',dataUser.uid,[34545667788,345678,34324234])
