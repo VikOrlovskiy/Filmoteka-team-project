@@ -17,4 +17,16 @@ function onSearch (e)  {
       .catch(error => {
         console.log(error.message);
       });
+      tuiPaginationSerch()
 };
+
+function onSearchInput(e) {
+  e.preventDefault();
+  if (!e.currentTarget.value) {
+    ref.buttonFilmSerch.disabled = true;
+    dataFetch.fetchTopFilms().then(renderMovieCardFilms)
+  }
+  else {
+    ref.buttonFilmSerch.disabled = false;
+  }
+}
