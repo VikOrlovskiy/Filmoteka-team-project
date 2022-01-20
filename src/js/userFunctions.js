@@ -50,11 +50,11 @@ function onRegistrationLinkClick(e){
     form.addEventListener('submit', onSubmitRegistrationForm)
 }
 export{onSubmitRegistrationForm,onSubmitEntryForm,renderForm,onRegistrationLinkClick}
-let dataUser = JSON.parse(localStorage.getItem('userData'))
-if(dataUser !== null){
-    writeUserData(dataUser.uid,[34545667788,345678,34324234])
-    // writeToFBHundler(dataUser.accessToken,'films',dataUser.uid,[34545667788,345678,34324234])
-}
+// let dataUser = JSON.parse(localStorage.getItem('userData'))
+// if(dataUser !== null){
+//     writeUserData(dataUser.uid,[34545667788,345678,34324234])
+//     // writeToFBHundler(dataUser.accessToken,'films',dataUser.uid,[34545667788,345678,34324234])
+// }
 // function writeToFBHundler(accessToken,nameCollection,uid,Collection) {
 //     console.log(nameCollection)
 //     return fetch(
@@ -70,10 +70,10 @@ if(dataUser !== null){
 //       .then(response => response.json())
 //       .then(data => console.log(data));
 //   }
-  if(dataUser !== null){
-    // readUserData(dataUser.uid)
-    //    readFromFBHundler(dataUser.accessToken,'films',dataUser.uid)
-}
+//   if(dataUser !== null){
+//     // readUserData(dataUser.uid)
+//     //    readFromFBHundler(dataUser.accessToken,'films',dataUser.uid)
+// }
 
 //   function readFromFBHundler(accessToken,nameCollection,uid) {
 //     return fetch(
