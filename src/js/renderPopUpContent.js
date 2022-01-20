@@ -4,9 +4,8 @@ import { actionPopUp } from './actionPopUp';
 // import FilmsApiService1 from "./filmServiceApi";
 const ESC_KEY_DOWN = 'Escape';
 import fetchById from './FetchMovieInformation';
-import { tuiPaginationSerch } from './paginationSerchFilm';
 
-export default ref.gallery.addEventListener('click', onOpenPopUp);
+ ref.gallery.addEventListener('click', onOpenPopUp);
 
 function onOpenPopUp(e) {
   e.preventDefault();
@@ -21,7 +20,7 @@ function onOpenPopUp(e) {
     fetchById(id).then(renderFilmCard);
     return;
   }
-  tuiPaginationSerch();
+
 }
 
 // fuction renderFilmCard by Id
