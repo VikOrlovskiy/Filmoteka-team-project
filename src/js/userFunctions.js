@@ -52,33 +52,8 @@ function onRegistrationLinkClick(e){
 export{onSubmitRegistrationForm,onSubmitEntryForm,renderForm,onRegistrationLinkClick}
 let dataUser = JSON.parse(localStorage.getItem('userData'))
 if(dataUser !== null){
-    writeUserData(dataUser.uid,[34545667788,345678,34324234])
-    // writeToFBHundler(dataUser.accessToken,'films',dataUser.uid,[34545667788,345678,34324234])
+    writeUserData(dataUser.uid,[34545667788,345678,34324234,354656,3456788,4567])
 }
-// function writeToFBHundler(accessToken,nameCollection,uid,Collection) {
-//     console.log(nameCollection)
-//     return fetch(
-//       `https://filmoteka2-11906-default-rtdb.europe-west1.firebasedatabase.app//${uid}/${nameCollection}.json?auth=${accessToken}`,
-//       {
-//         method: 'POST',
-//         body: JSON.stringify(Collection),
-//         headers: {
-//           'Content-Type': 'application/json',
-//         },
-//       },
-//     )
-//       .then(response => response.json())
-//       .then(data => console.log(data));
-//   }
   if(dataUser !== null){
     readUserData(dataUser.uid)
-       readFromFBHundler(dataUser.accessToken,'films',dataUser.uid)
 }
-
-//   function readFromFBHundler(accessToken,nameCollection,uid) {
-//     return fetch(
-//       `https://filmoteka2-11906-default-rtdb.europe-west1.firebasedatabase.app//${uid}/${nameCollection}.json?auth=${accessToken}`,
-//     )
-//       .then(response => response.json())
-//       .then(response => console.log(response))
-//   }
