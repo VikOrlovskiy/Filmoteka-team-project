@@ -29,6 +29,7 @@
     "axios": "^0.24.0",
     "firebase": "^9.6.3",
     "handlebars": "^4.7.7",
+    "hbs": "^4.2.0",
     "l": "^0.6.0",
     "tui-pagination": "^3.4.1"
   }

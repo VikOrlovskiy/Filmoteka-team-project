@@ -14,4 +14,4 @@ import './js/paginationGallery';
 import './js/paginationSerchFilm';
 import './js/loader';
 // ==========Document FOOTER=========
-// import "./js/footer";
+import "./js/footer_modal";

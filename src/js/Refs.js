@@ -26,5 +26,5 @@ export default {
   backdropBtnClose: document.querySelector('.btn-close'),
   popUp: document.querySelector('.pop-up'),
   // =======================footer================================
-  // footerButtonTeamModal: document.querySelector('.footer_button'),
+  footerBtnModal: document.querySelector('.team-button'),
 };

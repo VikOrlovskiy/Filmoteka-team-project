@@ -1,7 +1,11 @@
+.footer {
+    padding-top: 29px;    
+    padding-bottom: 29px;
+    background-color: $footer-Bg-color;
+}
+
 .footer__info {
     width:100%;
-    padding-top: 29px;    
-    padding-bottom: 29px;    
     display:flex;    
     flex-direction: column;    
     justify-content: center;    
@@ -9,13 +13,11 @@
     font-size: 14px;    
     font-weight: 400;    
     line-height: 1.17;    
-    color: $secondary-text-color;    
-    background-color: $footer-Bg-color;
+    color: $secondary-text-color;  
+    
     @media screen and (min-width: 769px) {
         flex-direction: row;        
         font-size: 16px;        
-        padding-top: 30px;        
-        padding-bottom:28px;    
     }
 }
 .line {    
@@ -29,7 +31,6 @@
 .footer__info-text{
     @media screen and (max-width:768px) {
         margin-bottom: 10px;
-        
     }
 }
 
@@ -59,9 +60,7 @@
     }
 }
 
-.team-button{    
-    font-family: 'Roboto';
-    font-size: 14px;
+.team-button {    
     color: $secondary-text-color;    
     text-decoration: underline;  
     border: none;
@@ -69,8 +68,22 @@
     text-align: center;
     cursor: pointer;
 
-    &:hover {
+    &:hover, 
+    &:focus {
         color: $acent-text-color;
         transition: color 250ms $primary-animation;
     }
 }
+
+.member-info {
+    display:flex;
+    
+}
+
+.member-card {
+    flex-basis: calc(100% / 2 - 10px);
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+
