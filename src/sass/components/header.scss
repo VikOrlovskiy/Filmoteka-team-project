@@ -8,6 +8,7 @@
     height: 230px;
     margin-left: auto;
     margin-right: auto;
+
     @media screen and (min-width: 320px) {
     background-image: linear-gradient(to top left, $header-Bg-color, $header-Bg-color),
       url('../images/mobile/header-mobile-x1.jpg');
@@ -60,11 +61,13 @@
     height: 230px;
     margin-left: auto;
     margin-right: auto;
+
+    @media screen and (min-width: 320px) {
     background-image: linear-gradient(to top left, $header-Bg-color, $header-Bg-color),
       url('../images/mobile/library-header-mobile-x1.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: 320px 230px ;
   
     @media (min-device-pixel-ratio: 2),
       (-webkit-min-device-pixel-ratio: 2),
@@ -73,7 +76,7 @@
       background-image: linear-gradient(to top left, $header-Bg-color, $header-Bg-color),
         url('../images/mobile/library-header-mobile-x2.jpg');
     }
-  
+    }
     @media screen and (min-width: 769px) {
       background-image: linear-gradient(to top left, $header-Bg-color, $header-Bg-color),
         url('../images/tablet/library-header-tablet-x1.jpg');
