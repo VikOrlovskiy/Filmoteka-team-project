@@ -30,6 +30,7 @@
     "firebase": "^9.6.3",
     "handlebars": "^4.7.7",
     "l": "^0.6.0",
+    "notiflix": "^3.2.2",
     "tui-pagination": "^3.4.1"
   }
 }
