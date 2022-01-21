@@ -1,7 +1,7 @@
 <div class="film-detail">
     <div class="film-detail__img">
-        {{#if backdrop_path}}
-            <img src="https://image.tmdb.org/t/p/w500{{backdrop_path}}" alt="{{original_title}}">
+        {{#if poster_path}}
+            <img src="https://image.tmdb.org/t/p/w500{{poster_path}}" alt="{{original_title}}">
         {{else}}
           <img src="https://i.ibb.co/NjvMgv7/poster.png" alt="no_poster">
         {{/if}}
@@ -11,7 +11,8 @@
         <div class="film-detail__list">
             <div class="film-detail__item">
                 <p class="film-detail__item--name">Vote / Votes</p>
-                <p class="film-detail__item--value"><span>{{vote_average}}</span>/<span>{{vote_count}}</span></p>
+                <p class="film-detail__item--value">
+                    <span class="film-detail__item--style">{{vote_average}}</span>/<span>{{vote_count}}</span></p>
             </div>
             <div class="film-detail__item">
                 <p class="film-detail__item--name">Popularity</p>
