@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth,createUserWithEmailAndPassword, signInWithEmailAndPassword,onAuthStateChanged,signOut} from 'firebase/auth';
 import { getDatabase, ref, set, child, get  } from "firebase/database";
+const DATABASEURL = 'https://filmoteka2-11906-default-rtdb.europe-west1.firebasedatabase.app//users/'
 //================== Your web app's Firebase configuration ================================
 const firebaseConfig = {
     apiKey: "AIzaSyBR83s7HPzADcrtRoUE2ndSXGar5JAgfWk",
@@ -24,6 +25,7 @@ function authState(){
           let userData = {'accessToken':user.accessToken ,'uid': user.uid}
           localStorage.setItem('userData', JSON.stringify(userData));
       } else {
+        localStorage.clear()
         console.log('no user')
       }
     });
@@ -59,24 +61,28 @@ function authWithEmailAndPassword(email, password) {
       localStorage.clear()
       signOut(auth)
     }
-// ========== write User Data to Firebase====================
-function writeUserData(userId, Collection) {
-  console.log('write')
-    set(ref(db, 'users/' + userId), {
-      queue:Collection,
-      Watched:Collection,
-    });
-  }
-// ========== read User Data to Firebase====================
-  function readUserData(userId){
-    get(child(dbRef, `users/${userId}`)).then((data) => {
-        if (data.exists()) {
-          console.log('read', data.val());
-        } else {
-          console.log("No data available");
-        }
-      }).catch((error) => {
-        console.error(error);
-      });
-  }
-export{authWithEmailAndPassword,RegistrationWithEmailAndPassword,readUserData,writeUserData,logOutAuthUser,authState}
+// ========== Write User Data====================
+function onCkickWriteUserData(accessToken,nameCollection,uid,Collection) {
+  return fetch(
+    `${DATABASEURL}${uid}/${nameCollection}.json?auth=${accessToken}`,
+    {
+      method: 'POST',
+      body: JSON.stringify(Collection),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    },
+  )
+    .then(response => response.json())
+    .then(data => console.log('WriteUserData'));
+}
+// ========== Read User Data====================
+// onCkickReadUserData(dataUser.accessToken,e.target.dataset.action,dataUser.uid)
+function onCkickReadUserData(accessToken,nameCollection,uid) {
+  return fetch(
+    `${DATABASEURL}/${uid}/${nameCollection}.json?auth=${accessToken}`,
+  )
+    .then(response => response.json())
+    .then(response => console.log(response))
+}
+export{onCkickWriteUserData,onCkickReadUserData,authWithEmailAndPassword,RegistrationWithEmailAndPassword,logOutAuthUser,authState}
