@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth,createUserWithEmailAndPassword, signInWithEmailAndPassword,onAuthStateChanged,signOut} from 'firebase/auth';
 import { getDatabase, ref, set, child, get  } from "firebase/database";
+import Notiflix from 'notiflix';
 const DATABASEURL = 'https://filmoteka2-11906-default-rtdb.europe-west1.firebasedatabase.app//users/'
 //================== Your web app's Firebase configuration ================================
 const firebaseConfig = {
@@ -34,26 +35,23 @@ function authState(){
 function RegistrationWithEmailAndPassword(email, password) {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-       console.log('RegistrationWithEmailAndPassword')
+       Notiflix.Notify.success('Registration was successful');
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(errorMessage)
-        console.log(errorCode)
-        // ..
+        Notiflix.Notify.failure(`${error.message}`);
       });}
 // ==========login to Firebase====================
 function authWithEmailAndPassword(email, password) {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        console.log('authWithEmailAndPassword')
+        Notiflix.Notify.success('Authorization was successful');
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(errorMessage)
-        console.log(errorCode)
+        Notiflix.Notify.failure(error.message);
       });
     }
 // ========== log out====================
