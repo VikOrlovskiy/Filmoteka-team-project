@@ -3,6 +3,7 @@ import Refs from "./Refs";
 import {actionPopUp} from './actionPopUp'
 import formLogIn from '../templates/formLogIn.hbs';
 import formRegistration from '../templates/formRegistration.hbs';
+import Notiflix from 'notiflix';
 // ==================logOut========================
 Refs.logOutButton.addEventListener('click' , logOutAuthUser)
 // ==================LogIn========================
@@ -36,6 +37,10 @@ function onSubmitRegistrationForm(e){
     const email = e.target.querySelector('#email').value;
     const password = e.target.querySelector('#password').value;
     const passwordConfirm = e.target.querySelector('#passwordConfirm').value;
+    if (password !== passwordConfirm) {
+        Notiflix.Notify.failure('Invalid repeat password. Try again!');
+        return;
+    }
     RegistrationWithEmailAndPassword(email, password);
     this.reset()
     document.body.classList.remove('show-modal');
