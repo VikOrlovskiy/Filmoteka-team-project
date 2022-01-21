@@ -2,6 +2,7 @@ import ref from './Refs.js';
 import filmCard from '../templates/card.hbs';
 import { actionPopUp } from './actionPopUp';
 import { onCkickWriteUserData,onCkickReadUserData } from './fireBaseApi';
+import Notiflix from 'notiflix';
 // import FilmsApiService1 from "./filmServiceApi";
 const ESC_KEY_DOWN = 'Escape';
 import fetchById from './FetchMovieInformation';
@@ -37,12 +38,14 @@ function onClickWriteDataFirebase(e){
   if(e.target.dataset.action === 'Watched'){
     onCkickWriteUserData(dataUser.accessToken,e.target.dataset.action,dataUser.uid,e.target.parentNode.id)
     e.target.disabled = true;
+    Notiflix.Notify.success('film add to Watched');
    return 
   }
   onCkickWriteUserData(dataUser.accessToken,e.target.dataset.action,dataUser.uid,e.target.parentNode.id)
   e.target.disabled = true;
+  Notiflix.Notify.success('film add to Queue');
 }else{
-console.log('you not auth')
+  Notiflix.Notify.failure('log in to use');
 e.target.disabled = true;}
 
 }
