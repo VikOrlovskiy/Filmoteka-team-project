@@ -14,4 +14,4 @@ import './js/paginationGallery';
 import './js/renderPopUpContent';
 import './js/loader';
 // ==========Document FOOTER=========
-// import "./js/footer";
+import "./js/footerModal";
