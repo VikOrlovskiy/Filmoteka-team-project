@@ -47,11 +47,3 @@ function onRegistrationLinkClick(e){
     let form = document.querySelector('.form')
     form.addEventListener('submit', onSubmitRegistrationForm)
 }
-export{onSubmitRegistrationForm,onSubmitEntryForm,renderForm,onRegistrationLinkClick}
-let dataUser = JSON.parse(localStorage.getItem('userData'))
-if(dataUser !== null){
-    writeUserData(dataUser.uid,[34545667788,345678,34324234,354656,3456788,4567])
-}
-  if(dataUser !== null){
-    readUserData(dataUser.uid)
-}
