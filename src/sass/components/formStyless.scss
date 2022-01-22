@@ -1,44 +1,54 @@
-.form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    &_title{
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &_title {
     text-align: center;
     font-weight: 500;
     font-size: 20px;
     margin-bottom: 20px;
+  }
+  & > label {
+    font-size: 16px;
+    color: $primary-text-color;
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 20px;
     }
-    &>label{
-        font-size: 16px;
-        color: $primary-text-color;
-        margin-bottom: 10px;
-        &:last-child{
-            margin-bottom: 20px;
-        }
+  }
+  &_input {
+    display: block;
+    color: $darkest-text-color;
+    margin-top: 10px;
+
+    border: 1px solid $darkest-text-color;
+    border-radius: 5px;
+
+    padding: 10px;
+
+    min-width: 240px;
+
+    transition: 250ms border $primary-animation;
+    &:hover,
+    &:focus {
+      border: 1px solid $acent-text-color;
     }
-    &_input{
-        display: block;
-        color: $darkest-text-color;
-        margin-top: 10px;
-
-        border: 1px solid $darkest-text-color;
-        border-radius: 5px;
-
-        padding: 10px;
-
-        min-width: 240px;
-
-        transition: 250ms border $primary-animation;
-        &:hover,&:focus{
-          border: 1px solid $acent-text-color;
-        }
-
+  }
+  & > a {
+    margin-top: 15px;
+    transition: 250ms color $primary-animation;
+    &:hover,
+    &:focus {
+      color: $acent-text-color;
     }
-    &>a{
-        margin-top: 15px;
-        transition: 250ms color $primary-animation;
-        &:hover,&:focus{
-        color: $acent-text-color;
-            }
-    }
+  }
+}
+#passwordConfirm.valid,
+#email.valid {
+  border: 2px solid #00ff08;
+}
+
+#passwordConfirm.invalid,
+#email.invalid {
+  border: 2px solid #ff0000;
 }
