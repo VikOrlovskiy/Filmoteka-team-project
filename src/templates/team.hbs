@@ -1,11 +1,13 @@
 <ul class="member-info">
     {{#each this}}     
-    <li class="member-card">
-        <div class="member-photo">
-            <img src="{{photo}}" width="100" height="150"alt="team member">
-        </div>
-        <p class="member-name">{{name}}</p>
-        <p class="member-role">{{role}}</p>
+    <li class="member-list">
+        <div class="member-card">
+            <div class="member-photo">
+                <img src="{{photo}}" width="250" height="250"alt="team member">
+            </div>
+            <p class="member-name">{{name}}</p>
+            <p class="member-role">{{role}}</p>
+        </div>        
     </li>
     {{/each}}
 </ul>    
