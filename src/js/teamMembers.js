@@ -29,9 +29,9 @@ export const teamItems = [
     //     name: "Юрий Паскар",
     //     role: "Developer",
     // },
-    // {
-    //     photo: "https://raw.githubusercontent.com/VikOrlovskiy/Filmoteka-team-project/main/src/images/team/kirsenko.jpg",
-    //     name: "Елена Кирсенко",
-    //     role: "Developer",
-    // },
+    {
+        photo: "https://raw.githubusercontent.com/VikOrlovskiy/Filmoteka-team-project/main/src/images/team/kirsenko.jpg",
+        name: "Елена Кирсенко",
+        role: "Developer",
+    },
 ];
