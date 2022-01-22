@@ -81,6 +81,6 @@ function onCkickReadUserData(accessToken,nameCollection,uid) {
     `${DATABASEURL}/${uid}/${nameCollection}.json?auth=${accessToken}`,
   )
     .then(response => response.json())
-    .then(response => console.log(response))
+    .then(response => { return response})
 }
 export{onCkickWriteUserData,onCkickReadUserData,authWithEmailAndPassword,RegistrationWithEmailAndPassword,logOutAuthUser,authState}

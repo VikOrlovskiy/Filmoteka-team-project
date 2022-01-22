@@ -1,14 +1,16 @@
 export default {
   // =====================navigation panel=======================
-  backHomePage:document.querySelector('.logo'),
+  backHomePage: document.querySelector('.logo'),
   buttonLibrary: document.querySelector('.library-link'),
   buttonHome: document.querySelector('.current-link'),
   conteinerBtnLibrary: document.querySelector('.btns-library'),
   searchForm: document.querySelector('.form-header'),
   headerContainer: document.querySelector('.header__container'),
+  BtnWatched: document.querySelector('.btn-watched'),
+  BtnQueue: document.querySelector('.btn-queue'),
   // ===============user buttons=======================================
-  logInButton:document.querySelector('#form-open'),
-  logOutButton:document.querySelector('#logOut'),
+  logInButton: document.querySelector('#form-open'),
+  logOutButton: document.querySelector('#logOut'),
   // ===============search=======================================
   formFilmSerch: document.querySelector('.form-search'),
   inputFilmSerch: document.querySelector('.search-input'),
