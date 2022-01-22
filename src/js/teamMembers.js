@@ -5,7 +5,7 @@ export const teamItems = [
         role: "Team Lead",
     },
     {
-        photo: "https://raw.githubusercontent.com/VikOrlovskiy/Filmoteka-team-project/main/src/images/team/oliynyk.jpg",
+        photo: "https://raw.githubusercontent.com/VikOrlovskiy/Filmoteka-team-project/main/src/images/team/oliynyk.JPG",
         name: "Наталия Олейник",
         role: "Scrum Master",
     },
@@ -15,7 +15,7 @@ export const teamItems = [
         role: "Developer",
     },
     {
-        photo: "https://raw.githubusercontent.com/VikOrlovskiy/Filmoteka-team-project/main/src/images/team/fedorenko.jpg",
+        photo: "https://raw.githubusercontent.com/VikOrlovskiy/Filmoteka-team-project/main/src/images/team/fedorenko.JPG",
         name: "Александр Федоренко",
         role: "Developer",
     },
@@ -30,7 +30,7 @@ export const teamItems = [
     //     role: "Developer",
     // },
     // {
-    //     photo: "",
+    //     photo: "https://raw.githubusercontent.com/VikOrlovskiy/Filmoteka-team-project/main/src/images/team/kirsenko.jpg",
     //     name: "Елена Кирсенко",
     //     role: "Developer",
     // },
