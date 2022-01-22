@@ -13,5 +13,6 @@ import './js/gallery';
 import './js/paginationGallery';
 import './js/renderPopUpContent';
 import './js/loader';
+import './js/firebaseDataWork'
 // ==========Document FOOTER=========
 import "./js/footerModal";
