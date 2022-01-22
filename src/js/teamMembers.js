@@ -1,36 +1,36 @@
 export const teamItems = [
     {
-        photo: "../images/team/orlovskyi.jpg",
+        photo: "https://raw.githubusercontent.com/VikOrlovskiy/Filmoteka-team-project/main/src/images/team/orlovskyi.jpg",
         name: "Виктор Орловский",
         role: "Team Lead",
     },
     {
-        photo: "../images/team/oliynyk.JPG",
+        photo: "https://raw.githubusercontent.com/VikOrlovskiy/Filmoteka-team-project/main/src/images/team/oliynyk.jpg",
         name: "Наталия Олейник",
         role: "Scrum Master",
     },
     {
-        photo: "../images/team/blazhko.jpg",
+        photo: "https://raw.githubusercontent.com/VikOrlovskiy/Filmoteka-team-project/main/src/images/team/blazhko.jpg",
         name: "Юрий Блажко",
         role: "Developer",
     },
     {
-        photo: "../images/team/fedorenko.JPG",
+        photo: "https://raw.githubusercontent.com/VikOrlovskiy/Filmoteka-team-project/main/src/images/team/fedorenko.jpg",
         name: "Александр Федоренко",
         role: "Developer",
     },
     {
-        photo: "../images/team/bondarenko.jpg",
+        photo: "https://raw.githubusercontent.com/VikOrlovskiy/Filmoteka-team-project/main/src/images/team/bondarenko.jpg",
         name: "Сергей Бондаренко",
         role: "Developer",
     },
     // {
-    //     photo: "../images/team/paskar.jpg",
+    //     photo: "",
     //     name: "Юрий Паскар",
     //     role: "Developer",
     // },
     // {
-    //     photo: "../images/team/kirsenko.jpg",
+    //     photo: "",
     //     name: "Елена Кирсенко",
     //     role: "Developer",
     // },
