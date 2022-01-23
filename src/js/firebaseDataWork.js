@@ -1,11 +1,9 @@
 import { onCkickReadUserData } from './fireBaseApi';
 import ref from './Refs';
-import fetchById from './FetchMovieInformation';
+import test from "./filmServiceApi";
 import movieCardTpl from '../templates/fetchMovieTemplate.hbs';
 
 document.querySelector('.header__container').addEventListener('click', onClickReadDataFirebase); 
-
-
 
 function onClickReadDataFirebase(e) {
   let dataUser = JSON.parse(localStorage.getItem('userData'));
@@ -19,7 +17,7 @@ function onClickReadDataFirebase(e) {
       valueReadUserWatched.then(value => {
         let values = Object.values(value);
         values.filter((course, index, array) => array.indexOf(course) === index)
-          .map(e => {fetchById(e).then(result => {renderMovieCard(result);});
+          .map(e => {test.fetchFilmByID(e).then(result => {renderMovieCard(result);});
           });
       });
       return;
@@ -33,7 +31,7 @@ function onClickReadDataFirebase(e) {
       let values = Object.values(value);
        values.filter((value, index, array) => array.indexOf(value) === index)
        .map(e => {
-         fetchById(e).then(result => {
+        test.fetchFilmByID(e).then(result => {
            renderMovieCard(result);
          });
        });
