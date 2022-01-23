@@ -3,8 +3,8 @@ import ref from './Refs';
 import fetchById from './FetchMovieInformation';
 import movieCardTpl from '../templates/fetchMovieTemplate.hbs';
 
-document.querySelector('.header__container').addEventListener('click', onClickReadDataFirebase); 
-
+document.querySelector('.library-link').addEventListener('click', onClickReadDataFirebase); 
+document.querySelector('.btns-library').addEventListener('click', onClickReadDataFirebase); 
 
 
 function onClickReadDataFirebase(e) {

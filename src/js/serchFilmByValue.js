@@ -4,6 +4,7 @@ const dataFetch = new DataFetch();
 import ref from './Refs';
 import { showLoader, hideLoader } from './loader';
 import Pagination from 'tui-pagination';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 ref.buttonFilmSerch.disabled = true;
 
 ref.formFilmSerch.addEventListener('submit', onSearch);
@@ -14,7 +15,13 @@ function onSearch(e) {
   ref.galleryRef.innerHTML = '';
   dataFetch
     .fetchFilms()
-    .then(renderMovieCardFilms)
+    .then(films => {
+        if (films.total_results === 0) {
+          dataFetch.fetchTopFilms().then(renderMovieCardFilms);
+          return error();
+      }
+      else{renderMovieCardFilms(films);} 
+    })
     .catch(error => {
       console.log(error.message);
     });
@@ -51,4 +58,8 @@ function tuiPaginationSerch() {
       renderMovieCardFilms(films);
     });
   });
+}
+
+function error() {
+  return Notify.failure('Sorry, nothing was found for your search.');
 }
