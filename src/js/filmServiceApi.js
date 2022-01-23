@@ -9,8 +9,8 @@ static fetchGenres() {
     return axios.get(`${URL}/genre/movie/list?${KEY}&language=${this.language}`)
     .then(response=> {this.genres = response.data.genres})}
 // ============= GET film by ID ===============
-static  fetchFilmByID() {
-    return axios.get(`${URL}/movie/${this.moveID}?${KEY}&language=${this.language}`).then(response => response.data)} ;
+static  fetchFilmByID(id) {
+    return axios.get(`${URL}/movie/${id}?${KEY}&language=${this.language}`).then(response => response.data)} ;
 constructor(){
     this.searchValue = '';
     this.language ='en-US';
