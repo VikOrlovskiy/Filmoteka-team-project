@@ -6,6 +6,7 @@ export default {
   conteinerBtnLibrary: document.querySelector('.btns-library'),
   searchForm: document.querySelector('.form-header'),
   headerContainer: document.querySelector('.header__container'),
+  userGalleryFunctions: document.querySelector('.site-nav__list'),
   BtnWatched: document.querySelector('.btn-watched'),
   BtnQueue: document.querySelector('.btn-queue'),
   // ===============user buttons=======================================
