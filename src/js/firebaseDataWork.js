@@ -10,7 +10,6 @@ document.querySelector('.button-list').addEventListener('click', onClickReadData
 function onClickReadDataFirebase(e) {
   let dataUser = JSON.parse(localStorage.getItem('userData'));
   if (dataUser !== null) {
-   ref.conteinerBtnLibrary.classList.remove('is-hidden');
     if (e.target.nodeName !== 'BUTTON') {
       return;
     }
@@ -19,6 +18,7 @@ function onClickReadDataFirebase(e) {
       ref.BtnQueue.classList.remove('active');
       const valueReadUserWatched= onCkickReadUserData( dataUser.accessToken, e.target.dataset.action, dataUser.uid,
       )
+      ref.galleryRef.innerHTML = '';
       valueReadUserWatched.then(value => {
         let values = Object.values(value);
         values.filter((course, index, array) => array.indexOf(course) === index)
@@ -27,6 +27,7 @@ function onClickReadDataFirebase(e) {
       });
       return;
     }
+    ref.galleryRef.innerHTML = '';
     ref.BtnWatched.classList.remove('active');
     ref.BtnQueue.classList.add('active');
     const valueReadUserData = onCkickReadUserData(
