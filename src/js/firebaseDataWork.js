@@ -3,16 +3,13 @@ import ref from './Refs';
 import fetchById from './FetchMovieInformation';
 import movieCardTpl from '../templates/fetchMovieTemplate.hbs';
 
-document.querySelector('.button-list').addEventListener('click', onClickReadDataFirebase); 
+document.querySelector('.header__container').addEventListener('click', onClickReadDataFirebase); 
 
 
 
 function onClickReadDataFirebase(e) {
   let dataUser = JSON.parse(localStorage.getItem('userData'));
   if (dataUser !== null) {
-    if (e.target.nodeName !== 'BUTTON') {
-      return;
-    }
     if (e.target.dataset.action === 'Watched') {
       ref.BtnWatched.classList.add('active');
       ref.BtnQueue.classList.remove('active');
