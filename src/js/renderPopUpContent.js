@@ -1,7 +1,7 @@
 import ref from './Refs.js';
 import filmCard from '../templates/card.hbs';
 import { actionPopUp } from './actionPopUp';
-import { onCkickWriteUserData,onCkickReadUserData } from './fireBaseApi';
+import { onCkickWriteUserData } from './fireBaseApi';
 import Notiflix from 'notiflix';
 // import FilmsApiService1 from "./filmServiceApi";
 const ESC_KEY_DOWN = 'Escape';
@@ -38,12 +38,12 @@ function onClickWriteDataFirebase(e){
   if(e.target.dataset.action === 'Watched'){
     onCkickWriteUserData(dataUser.accessToken,e.target.dataset.action,dataUser.uid,e.target.parentNode.id)
     e.target.disabled = true;
-    Notiflix.Notify.success('film add to Watched');
+    e.target.textContent = 'added to Watch'
    return 
   }
   onCkickWriteUserData(dataUser.accessToken,e.target.dataset.action,dataUser.uid,e.target.parentNode.id)
   e.target.disabled = true;
-  Notiflix.Notify.success('film add to Queue');
+  e.target.textContent = 'added to Queue'
 }else{
   Notiflix.Notify.failure('log in to use');
 e.target.disabled = true;}
