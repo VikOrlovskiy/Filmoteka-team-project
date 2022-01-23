@@ -3,13 +3,12 @@ import filmCard from '../templates/card.hbs';
 import { actionPopUp } from './actionPopUp';
 import { onCkickWriteUserData } from './fireBaseApi';
 import Notiflix from 'notiflix';
-// import FilmsApiService1 from "./filmServiceApi";
-const ESC_KEY_DOWN = 'Escape';
-import fetchById from './FetchMovieInformation';
+import test from "./filmServiceApi";
+// import fetchById from './FetchMovieInformation';
 
  ref.gallery.addEventListener('click', onOpenPopUp);
 
-function onOpenPopUp(e) {
+async function onOpenPopUp(e) {
   e.preventDefault();
   let id;
   actionPopUp();
@@ -19,10 +18,10 @@ function onOpenPopUp(e) {
   ) {
     id = e.target.parentNode.parentNode.id;
     document.body.classList.add('show-modal');
-    fetchById(id).then(renderFilmCard);
+    // await fetchById(id).then(renderFilmCard);
+    await test.fetchFilmByID(id).then(renderFilmCard);
     return;
   }
-
 }
 
 // fuction renderFilmCard by Id

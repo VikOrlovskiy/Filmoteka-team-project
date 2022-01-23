@@ -53,8 +53,9 @@
   }
   
   .film-detail__item {
-    position: relative;
-    display: flex;
+    // position: relative;
+    // display: flex;
+    column-count: 2;
     font-weight: 500;
     font-size: 12px;
     line-height: 16px;
@@ -64,15 +65,16 @@
       border-radius: 5px;
       padding: 1px 10px;
       color: white;
+      margin-right: 3px;
     }
   }
   
   .film-detail__item--value {
-    position: absolute;
-    left: 50%;
-    display: flex;
-    align-items: center;
-    grid-column-gap: 10px;
+    // position: absolute;
+    // left: 50%;
+    // display: flex;
+    // align-items: center;
+    // grid-column-gap: 10px;
     font-weight: 500;
     font-size: 12px;
     line-height: 14px;
