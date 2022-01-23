@@ -3,7 +3,8 @@ import ref from './Refs';
 import test from "./filmServiceApi";
 import movieCardTpl from '../templates/fetchMovieTemplate.hbs';
 
-document.querySelector('.header__container').addEventListener('click', onClickReadDataFirebase); 
+document.querySelector('.library-link').addEventListener('click', onClickReadDataFirebase); 
+document.querySelector('.btns-library').addEventListener('click', onClickReadDataFirebase);
 
 function onClickReadDataFirebase(e) {
   let dataUser = JSON.parse(localStorage.getItem('userData'));
