@@ -5,9 +5,11 @@ import DataFetch from './filmServiceApi';
 function renderMovieCardFilms(films) {
   return films.results.map(
     ({ original_title, release_date, poster_path, genre_ids, vote_average, id }) => {
-      let changedYear = changeYear(release_date);
-      let filmGenry = changeGenrys(genre_ids);
-      refs.galleryRef.insertAdjacentHTML('afterbegin',movieCardTpl({original_title,changedYear,poster_path,filmGenry,vote_average,id,}),
+     release_date = changeYear(release_date);
+      let genres = changeGenrys(genre_ids);
+      refs.galleryRef.insertAdjacentHTML(
+        'afterbegin',
+        movieCardTpl({ original_title, release_date, poster_path, genres, vote_average, id }),
       );
     },
   );

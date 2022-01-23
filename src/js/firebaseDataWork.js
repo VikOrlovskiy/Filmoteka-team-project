@@ -1,30 +1,59 @@
 import { onCkickReadUserData } from './fireBaseApi';
-import Notiflix from 'notiflix';
 import ref from './Refs';
+import fetchById from './FetchMovieInformation';
+import movieCardTpl from '../templates/fetchMovieTemplate.hbs';
 
-
-
-   document.querySelector('.button-list').addEventListener('click', onClickReadDataFirebase); 
+document.querySelector('.button-list').addEventListener('click', onClickReadDataFirebase); 
 
 
 
 function onClickReadDataFirebase(e) {
   let dataUser = JSON.parse(localStorage.getItem('userData'));
   if (dataUser !== null) {
+   ref.conteinerBtnLibrary.classList.remove('is-hidden');
     if (e.target.nodeName !== 'BUTTON') {
       return;
     }
-    if (e.target.dataset.action === 'btn-watched') {
-      onCkickReadUserData( dataUser.accessToken, e.target.dataset.action, dataUser.uid,
-      ).then(response => console.log({ ...response }));
-      Notiflix.Notify.success('Watched');
+    if (e.target.dataset.action === 'Watched') {
+      ref.BtnWatched.classList.add('active');
+      ref.BtnQueue.classList.remove('active');
+      const valueReadUserWatched= onCkickReadUserData( dataUser.accessToken, e.target.dataset.action, dataUser.uid,
+      )
+      valueReadUserWatched.then(value => {
+        let values = Object.values(value);
+        values.filter((course, index, array) => array.indexOf(course) === index)
+          .map(e => {fetchById(e).then(result => {renderMovieCard(result);});
+          });
+      });
       return;
     }
-      onCkickReadUserData(dataUser.accessToken, e.target.dataset.action, dataUser.uid,).then(
-        response => console.log({ ...response }),
-      );
-    Notiflix.Notify.success('Queue')
-  } else {
-    Notiflix.Notify.failure('log in to use');
-  }
+    ref.BtnWatched.classList.remove('active');
+    ref.BtnQueue.classList.add('active');
+    const valueReadUserData = onCkickReadUserData(
+      dataUser.accessToken,e.target.dataset.action,dataUser.uid,);
+    valueReadUserData.then(value => {
+      let values = Object.values(value);
+       values.filter((value, index, array) => array.indexOf(value) === index)
+       .map(e => {
+         fetchById(e).then(result => {
+           renderMovieCard(result);
+         });
+       });
+      })
+  } 
 }
+
+function renderMovieCard(e) {
+  e.release_date = e.release_date.slice(0, 4)
+ e.genres = ganreElement(e.genres) 
+  ref.galleryRef.insertAdjacentHTML('afterbegin',movieCardTpl(e));
+}
+
+const ganreElement = (e) => {
+ if(e.length===0) {
+  return `Unknown`;
+ }
+ else {
+  return e.map(id => id.name).slice(0,2);}
+}
+  

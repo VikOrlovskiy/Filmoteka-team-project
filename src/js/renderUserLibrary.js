@@ -1,7 +1,8 @@
 import ref from './Refs'
 
 ref.buttonLibrary.addEventListener('click', onClickLibrary)
-ref.buttonHome.addEventListener('click', onClickLibrary);
+//ref.buttonHome.addEventListener('click', onClickLibrary);
+ref.buttonHome.addEventListener('click', onClickReloadPage);
 ref.backHomePage.addEventListener('click', onClickReloadPage);
 
 function onClickReloadPage() {
@@ -10,9 +11,17 @@ function onClickReloadPage() {
 
 function onClickLibrary(e) {
     e.preventDefault();
-    ref.searchForm.classList.toggle('is-hidden');
-    ref.conteinerBtnLibrary.classList.toggle('is-hidden');
-    ref.headerContainer.classList.toggle('header__container--library');
-    ref.buttonLibrary.classList.toggle('current-link');
-    ref.buttonHome.classList.toggle('current-link');
+    ref.galleryRef.innerHTML = '';
+    document.querySelector('.tui-pagination').innerHTML = '';
+    ref.searchForm.classList.add('is-hidden');
+    ref.conteinerBtnLibrary.classList.remove('is-hidden');
+    ref.headerContainer.classList.add('header__container--library');
+    ref.buttonLibrary.classList.add('current-link');
+    ref.buttonHome.classList.remove('current-link');
+    let dataUser = JSON.parse(localStorage.getItem('userData'));
+    if (dataUser === null) {
+        document.querySelector('.header__container').insertAdjacentHTML(
+            'beforeend',`<p class="message-register">You need to register to accesse</p>`,
+          );
+    }
 };
