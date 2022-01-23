@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth,createUserWithEmailAndPassword, signInWithEmailAndPassword,onAuthStateChanged,signOut} from 'firebase/auth';
-import { getDatabase, ref, set, child, get  } from "firebase/database";
+import { getDatabase, ref} from "firebase/database";
+import Refs from "./Refs";
 import Notiflix from 'notiflix';
 const DATABASEURL = 'https://filmoteka2-11906-default-rtdb.europe-west1.firebasedatabase.app//users/'
 //================== Your web app's Firebase configuration ================================
@@ -16,8 +17,6 @@ const firebaseConfig = {
 //================= Initialize Firebase ===================================================
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
-const db = getDatabase();
-const dbRef = ref(getDatabase());
 //=================  Firebase functions ===================================================
 // ========== Auth State ====================
 function authState(){
@@ -25,7 +24,13 @@ function authState(){
       if (user) {
           let userData = {'accessToken':user.accessToken ,'uid': user.uid}
           localStorage.setItem('userData', JSON.stringify(userData));
+          Refs.userGalleryFunctions.classList.remove('is-hidden');
+          Refs.logOutButton.classList.remove('is-hidden');
+          Refs.logInButton.classList.add('is-hidden');
       } else {
+        Refs.userGalleryFunctions.classList.add('is-hidden');
+        Refs.logOutButton.classList.add('is-hidden');
+        Refs.logInButton.classList.remove('is-hidden');
         localStorage.clear()
         console.log('no user')
       }
