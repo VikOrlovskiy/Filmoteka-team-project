@@ -3,8 +3,10 @@ import ref from './Refs';
 import test from "./filmServiceApi";
 import movieCardTpl from '../templates/fetchMovieTemplate.hbs';
 
-document.querySelector('.library-link').addEventListener('click', onClickReadDataFirebase); 
-document.querySelector('.btns-library').addEventListener('click', onClickReadDataFirebase);
+ref.BtnWatched.addEventListener('click', onClickReadDataFirebase);
+ref.BtnQueue.addEventListener('click', onClickReadDataFirebase);
+ref.buttonLibrary.addEventListener('click', onClickReadDataFirebase);
+ref.BtnWatched.disabled = true;
 
 function onClickReadDataFirebase(e) {
   let dataUser = JSON.parse(localStorage.getItem('userData'));
@@ -21,6 +23,8 @@ function onClickReadDataFirebase(e) {
           .map(e => {test.fetchFilmByID(e).then(result => {renderMovieCard(result);});
           });
       });
+      ref.BtnWatched.disabled = true;
+        ref.BtnQueue.disabled = false;
       return;
     }
     ref.galleryRef.innerHTML = '';
@@ -36,7 +40,9 @@ function onClickReadDataFirebase(e) {
            renderMovieCard(result);
          });
        });
-      })
+    })
+    ref.BtnWatched.disabled = false;
+    ref.BtnQueue.disabled = true;
   } 
 }
 
