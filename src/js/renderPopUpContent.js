@@ -48,10 +48,29 @@ function onClickWriteDataFirebase(e){
   }
   if(e.target.dataset.action === 'remove'){
     if(ref.BtnWatched.classList.contains('active')){
+      let userFilmDataWatchedValues = Object.values(JSON.parse(localStorage.getItem('Watched')));
+      let userFilmDataWatchedKeys = Object.keys(JSON.parse(localStorage.getItem('Watched')));
+      for (let i = 0; i < userFilmDataWatchedValues.length; i +=1) {
+        if(userFilmDataWatchedValues[i] === e.target.parentNode.id){
+          onCkickRemoveUserData(dataUser.accessToken,'Watched',userFilmDataWatchedKeys[i],dataUser.uid)
+        }
+      }
+      e.target.disabled = true;
+      e.target.textContent = 'removed'
+      return
     }
-    console.log('remove film')
-    e.target.disabled = true;
-    e.target.textContent = 'removed'
+    if(ref.BtnQueue.classList.contains('active')){
+      let userFilmDataQueueValues = Object.values(JSON.parse(localStorage.getItem('queue')));
+      let userFilmDataQueueKeys = Object.keys(JSON.parse(localStorage.getItem('queue')));
+      for (let i = 0; i < userFilmDataQueueValues.length; i +=1) {
+        if(userFilmDataQueueValues[i] === e.target.parentNode.id){
+          onCkickRemoveUserData(dataUser.accessToken,'queue',userFilmDataQueueKeys[i],dataUser.uid)
+        }
+      }
+      e.target.disabled = true;
+      e.target.textContent = 'removed'
+      return
+    }
    return 
   }
   onCkickWriteUserData(dataUser.accessToken,e.target.dataset.action,dataUser.uid,e.target.parentNode.id)
