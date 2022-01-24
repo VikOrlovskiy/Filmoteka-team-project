@@ -17,7 +17,8 @@ function onSearch(e) {
     .fetchFilms()
     .then(films => {
       if (films.total_results === 0) {
-        dataFetch.fetchTopFilms().then(renderMovieCardFilms);
+        ref.inputFilmSerch.value = '';
+          dataFetch.fetchTopFilms().then(renderMovieCardFilms);
         return error();
       } else {
         renderMovieCardFilms(films);
