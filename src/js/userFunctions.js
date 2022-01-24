@@ -50,16 +50,6 @@ function onSubmitRegistrationForm(e){
     const password = e.target.querySelector('#password').value;
     const passwordConfirm = e.target.querySelector('#passwordConfirm').value;
 
-    if (password !== passwordConfirm) {
-        Notiflix.Notify.failure('Invalid repeat password. Try again!');
-        e.target.querySelector('#passwordConfirm').classList.add('invalid');
-        e.target.querySelector('#passwordConfirm').classList.remove('valid');
-        return;
-    } else {
-       e.target.querySelector('#passwordConfirm').classList.add('valid');
-        e.target.querySelector('#passwordConfirm').classList.remove('invalid'); 
-    }
-
     if (!emailCheck.test(email)) {
         Notiflix.Notify.failure('Invalid email. Try again!');
         e.target.querySelector('#email').classList.add('invalid');
@@ -68,6 +58,16 @@ function onSubmitRegistrationForm(e){
     } else {
        e.target.querySelector('#email').classList.add('valid');
         e.target.querySelector('#email').classList.remove('invalid'); 
+    }
+
+    if (password !== passwordConfirm) {
+        Notiflix.Notify.failure('Invalid repeat password. Try again!');
+        e.target.querySelector('#passwordConfirm').classList.add('invalid');
+        e.target.querySelector('#passwordConfirm').classList.remove('valid');
+        return;
+    } else {
+       e.target.querySelector('#passwordConfirm').classList.add('valid');
+        e.target.querySelector('#passwordConfirm').classList.remove('invalid'); 
     }
 
     RegistrationWithEmailAndPassword(email, password);
