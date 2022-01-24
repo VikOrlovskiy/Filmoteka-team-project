@@ -77,7 +77,6 @@ function onCkickWriteUserData(accessToken,nameCollection,uid,Collection) {
     },
   )
     .then(response => response.json())
-    .then(data => console.log('WriteUserData'));
 }
 // ========== Read User Data====================
 // onCkickReadUserData(dataUser.accessToken,e.target.dataset.action,dataUser.uid)
