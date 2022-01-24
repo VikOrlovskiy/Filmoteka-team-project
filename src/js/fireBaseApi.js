@@ -63,6 +63,7 @@ function authWithEmailAndPassword(email, password) {
     function logOutAuthUser(){
       localStorage.clear()
       signOut(auth)
+      location.reload()
     }
 // ========== Write User Data====================
 function onCkickWriteUserData(accessToken,nameCollection,uid,Collection) {
@@ -79,7 +80,6 @@ function onCkickWriteUserData(accessToken,nameCollection,uid,Collection) {
     .then(response => response.json())
 }
 // ========== Read User Data====================
-// onCkickReadUserData(dataUser.accessToken,e.target.dataset.action,dataUser.uid)
 function onCkickReadUserData(accessToken,nameCollection,uid) {
   return fetch(
     `${DATABASEURL}/${uid}/${nameCollection}.json?auth=${accessToken}`,
@@ -87,4 +87,12 @@ function onCkickReadUserData(accessToken,nameCollection,uid) {
     .then(response => response.json())
     .then(response => { return response})
 }
-export{onCkickWriteUserData,onCkickReadUserData,authWithEmailAndPassword,RegistrationWithEmailAndPassword,logOutAuthUser,authState}
+
+function onCkickRemoveUserData(accessToken,nameCollection,uid) {
+ return fetch( `${DATABASEURL}/${uid}/${nameCollection}/${fireBaseWriteId}.json?auth=${accessToken}`, {
+  method: "DELETE",
+})
+  .then(() => console.log("Post deleted"))
+  .catch(error => console.log("Error:", error));
+}
+export{onCkickWriteUserData,onCkickReadUserData,authWithEmailAndPassword,RegistrationWithEmailAndPassword,logOutAuthUser,authState,onCkickRemoveUserData}
