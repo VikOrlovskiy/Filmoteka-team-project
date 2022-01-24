@@ -88,7 +88,7 @@ function onCkickReadUserData(accessToken,nameCollection,uid) {
     .then(response => { return response})
 }
 
-function onCkickRemoveUserData(accessToken,nameCollection,uid) {
+function onCkickRemoveUserData(accessToken,nameCollection,fireBaseWriteId,uid) {
  return fetch( `${DATABASEURL}/${uid}/${nameCollection}/${fireBaseWriteId}.json?auth=${accessToken}`, {
   method: "DELETE",
 })
