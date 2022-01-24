@@ -1,0 +1,42 @@
+<div class="film-detail">
+    <div class="film-detail__img">
+        {{#if poster_path}}
+            <img src="https://image.tmdb.org/t/p/w500{{poster_path}}" alt="{{original_title}}">
+        {{else}}
+          <img src="https://i.ibb.co/NjvMgv7/poster.png" alt="no_poster">
+        {{/if}}
+    </div>
+    <div class="film-detail__information">
+        <h2 class="film-detail__title">{{original_title}}</h2>
+        <div class="film-detail__list">
+            <div class="film-detail__item">
+                <p class="film-detail__item--name">Vote / Votes</p>
+                <p class="film-detail__item--value">
+                    <span class="film-detail__item--style">{{vote_average}}</span>/<span>{{vote_count}}</span></p>
+            </div>
+            <div class="film-detail__item">
+                <p class="film-detail__item--name">Popularity</p>
+                <p class="film-detail__item--value">{{popularity}}</p>
+            </div>
+            <div class="film-detail__item">
+                <p class="film-detail__item--name">Original Title</p>
+                <p class="film-detail__item--value">{{original_title}}</p>
+            </div>
+            <div class="film-detail__item">
+                <p class="film-detail__item--name">Genre</p>
+                <p class="film-detail__item--value">
+                    {{genres.0.name}} 
+                </p>
+            </div>
+            <div class="film-detail__about">
+                <h3 class="film-detail__subtitle">About</h3>
+                <p class="film-detail__text">
+                    {{overview}}
+                </p>
+            </div>    
+        </div>
+        <div class="film-detail__btns" id="{{id}}">
+            <button class="button" data-action="remove">remove film</button>
+        </div>
+    </div>
+</div>
