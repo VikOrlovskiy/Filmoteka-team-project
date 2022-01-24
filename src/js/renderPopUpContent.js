@@ -2,7 +2,7 @@ import ref from './Refs.js';
 import filmCard from '../templates/card.hbs';
 import userLibraryFilmCard from '../templates/userLibraryFilmCard.hbs';
 import { actionPopUp } from './actionPopUp';
-import { onCkickWriteUserData } from './fireBaseApi';
+import { onCkickWriteUserData ,onCkickRemoveUserData} from './fireBaseApi';
 import Notiflix from 'notiflix';
 import test from "./filmServiceApi";
 // import fetchById from './FetchMovieInformation';
@@ -47,6 +47,8 @@ function onClickWriteDataFirebase(e){
    return 
   }
   if(e.target.dataset.action === 'remove'){
+    if(ref.BtnWatched.classList.contains('active')){
+    }
     console.log('remove film')
     e.target.disabled = true;
     e.target.textContent = 'removed'
