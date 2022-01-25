@@ -3,10 +3,12 @@
     <li class="member-list">
         <div class="member-card">
             <div class="member-photo">
-                <img src="{{photo}}" width="250" height="250"alt="team member">
+                <img class="photo" src="{{photo}}" width="292" height="292"alt="team member">
             </div>
-            <p class="member-name">{{name}}</p>
-            <p class="member-role">{{role}}</p>
+            <div class="member-description">
+                <p class="member-name">{{name}}</p>
+                <p class="member-role">{{role}}</p>
+            </div>            
         </div>        
     </li>
     {{/each}}
