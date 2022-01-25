@@ -3,18 +3,18 @@ import {actionPopUp} from './actionPopUp'
 import formLogIn from '../templates/formLogIn.hbs';
 import formRegistration from '../templates/formRegistration.hbs';
 import Notiflix from 'notiflix';
-import ref from "./refs";
+import Ref from "./refs";
 // ==================logOut========================
-ref.logOutButton.addEventListener('click' , logOutAuthUser)
+Ref.logOutButton.addEventListener('click' , logOutAuthUser)
 // ==================LogIn========================
-ref.logInButton.addEventListener('click' , onClickregistrationOrlogInUser)
+Ref.logInButton.addEventListener('click' , onClickregistrationOrlogInUser)
 // ==================User auth State========================
 const emailCheck = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
 
 authState()
 function onClickregistrationOrlogInUser(){
     renderForm(formLogIn)
-    ref.popUp.classList.add("modal_form")
+    Ref.popUp.classList.add("modal_form")
     document.body.classList.add('show-modal');
     let form =  document.querySelector('.form')
     form.addEventListener('submit',onSubmitEntryForm)
@@ -22,7 +22,7 @@ function onClickregistrationOrlogInUser(){
     actionPopUp()
 }
 function renderForm(value){
-    ref.popUp.insertAdjacentHTML('afterbegin', value())
+    Ref.popUp.insertAdjacentHTML('afterbegin', value())
 }
 function onSubmitEntryForm(e){
     e.preventDefault()
@@ -42,7 +42,7 @@ function onSubmitEntryForm(e){
     authWithEmailAndPassword(email, password);
     this.reset()
     document.body.classList.remove('show-modal');
-    ref.popUp.innerHTML="" ;
+    Ref.popUp.innerHTML="" ;
 }
 function onSubmitRegistrationForm(e){
     e.preventDefault()
@@ -73,10 +73,10 @@ function onSubmitRegistrationForm(e){
     RegistrationWithEmailAndPassword(email, password);
     this.reset()
     document.body.classList.remove('show-modal');
-    ref.popUp.innerHTML="" ;
+    Ref.popUp.innerHTML="" ;
 }
 function onRegistrationLinkClick(e){
-    ref.popUp.innerHTML="" ;
+    Ref.popUp.innerHTML="" ;
     renderForm(formRegistration)
     let form = document.querySelector('.form')
     form.addEventListener('submit', onSubmitRegistrationForm)
