@@ -1,8 +1,8 @@
-import { initializeApp } from "firebase/app";
-import { getAuth,createUserWithEmailAndPassword, signInWithEmailAndPassword,onAuthStateChanged,signOut} from 'firebase/auth';
-import { getDatabase, ref} from "firebase/database";
 import Refs from "./Refs";
 import Notiflix from 'notiflix';
+import { initializeApp } from "firebase/app";
+import { getAuth,createUserWithEmailAndPassword, signInWithEmailAndPassword,onAuthStateChanged,signOut} from 'firebase/auth';
+
 const DATABASEURL = 'https://filmoteka2-11906-default-rtdb.europe-west1.firebasedatabase.app//users/'
 //================== Your web app's Firebase configuration ================================
 const firebaseConfig = {
@@ -32,7 +32,6 @@ function authState(){
         Refs.logOutButton.classList.add('is-hidden');
         Refs.logInButton.classList.remove('is-hidden');
         localStorage.clear()
-        console.log('no user')
       }
     });
   }
@@ -43,9 +42,7 @@ function RegistrationWithEmailAndPassword(email, password) {
        Notiflix.Notify.success('Registration was successful');
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        Notiflix.Notify.failure(`${error.message}`);
+        Notiflix.Notify.failure("email already registered write another one")
       });}
 // ==========login to Firebase====================
 function authWithEmailAndPassword(email, password) {
@@ -54,9 +51,7 @@ function authWithEmailAndPassword(email, password) {
         Notiflix.Notify.success('Authorization was successful');
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        Notiflix.Notify.failure(error.message);
+        Notiflix.Notify.failure("check the correct password");
       });
     }
 // ========== log out====================
