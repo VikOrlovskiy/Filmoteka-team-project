@@ -5,7 +5,6 @@ import { actionPopUp } from './actionPopUp';
 import { onCkickWriteUserData ,onCkickRemoveUserData} from './fireBaseApi';
 import Notiflix from 'notiflix';
 import test from "./filmServiceApi";
-// import fetchById from './FetchMovieInformation';
 
  ref.gallery.addEventListener('click', onOpenPopUp);
 
@@ -19,7 +18,6 @@ async function onOpenPopUp(e) {
   ) {
     id = e.target.parentNode.parentNode.id;
     document.body.classList.add('show-modal');
-    // await fetchById(id).then(renderFilmCard);
     await test.fetchFilmByID(id).then(renderFilmCard);
     return;
   }
