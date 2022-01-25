@@ -1,5 +1,5 @@
 import { authWithEmailAndPassword, RegistrationWithEmailAndPassword,logOutAuthUser,authState,readUserData,writeUserData} from "./fireBaseApi";
-import Refs from "./Refs";
+import Refs from "./refs";
 import {actionPopUp} from './actionPopUp'
 import formLogIn from '../templates/formLogIn.hbs';
 import formRegistration from '../templates/formRegistration.hbs';

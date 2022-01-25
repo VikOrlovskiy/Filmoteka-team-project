@@ -1,7 +1,7 @@
 import DataFetch from './filmServiceApi.js';
 import { renderMovieCardFilms } from './normaliseRenderFilm';
 const dataFetch = new DataFetch();
-import ref from './Refs';
+import ref from './refs';
 import { showLoader, hideLoader } from './loader';
 import Pagination from 'tui-pagination';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';

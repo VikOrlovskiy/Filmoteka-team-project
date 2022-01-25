@@ -1,5 +1,5 @@
 import Pagination from 'tui-pagination';
-import refs from './Refs';
+import refs from './refs';
 import DataFetch from './filmServiceApi.js';
 import { renderMovieCardFilms } from './normaliseRenderFilm';
 const dataFetch = new DataFetch();

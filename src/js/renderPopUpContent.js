@@ -1,4 +1,4 @@
-import ref from './Refs.js';
+import ref from './refs.js';
 import filmCard from '../templates/card.hbs';
 import userLibraryFilmCard from '../templates/userLibraryFilmCard.hbs';
 import { actionPopUp } from './actionPopUp';
