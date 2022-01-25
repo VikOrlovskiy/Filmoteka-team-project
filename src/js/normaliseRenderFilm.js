@@ -1,4 +1,4 @@
-import refs from './refs.js';
+import refs from './Refs.js';
 import movieCardTpl from '../templates/fetchMovieTemplate.hbs';
 import DataFetch from './filmServiceApi';
 // ====== function render gallery film  card ====

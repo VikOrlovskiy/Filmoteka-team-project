@@ -3,7 +3,7 @@ import {actionPopUp} from './actionPopUp'
 import formLogIn from '../templates/formLogIn.hbs';
 import formRegistration from '../templates/formRegistration.hbs';
 import Notiflix from 'notiflix';
-import Refs from "./refs.js";
+import Refs from "./Refs.js";
 // ==================logOut========================
 Refs.logOutButton.addEventListener('click' , logOutAuthUser)
 // ==================LogIn========================

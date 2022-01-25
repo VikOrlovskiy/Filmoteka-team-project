@@ -1,4 +1,4 @@
-import ref from './refs'
+import ref from './Refs'
 
 function showLoader() {
     ref.loader.classList.add('loading');

@@ -1,4 +1,4 @@
-import refs from './refs'
+import refs from './Refs'
 import team from '../templates/team.hbs'
 import { teamItems } from "./teamMembers";
 import { actionPopUp } from './actionPopUp'

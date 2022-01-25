@@ -1,4 +1,4 @@
-import Refs from "./refs";
+import Refs from "./Refs";
 import Notiflix from 'notiflix';
 import { initializeApp } from "firebase/app";
 import { getAuth,createUserWithEmailAndPassword, signInWithEmailAndPassword,onAuthStateChanged,signOut} from 'firebase/auth';

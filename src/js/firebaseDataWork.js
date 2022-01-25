@@ -1,5 +1,5 @@
 import { onCkickReadUserData } from './fireBaseApi';
-import ref from './refs';
+import ref from './Refs';
 import test from "./filmServiceApi";
 import movieCardTpl from '../templates/fetchMovieTemplate.hbs';
 
