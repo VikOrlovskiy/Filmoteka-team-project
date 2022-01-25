@@ -1,4 +1,4 @@
-import { authWithEmailAndPassword, RegistrationWithEmailAndPassword,logOutAuthUser,authState,readUserData,writeUserData} from "./fireBaseApi";
+import { authWithEmailAndPassword, RegistrationWithEmailAndPassword,logOutAuthUser,authState} from "./fireBaseApi";
 import {actionPopUp} from './actionPopUp'
 import formLogIn from '../templates/formLogIn.hbs';
 import formRegistration from '../templates/formRegistration.hbs';
