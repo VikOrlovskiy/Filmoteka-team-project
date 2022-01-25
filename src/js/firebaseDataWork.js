@@ -1,6 +1,6 @@
 import { onCkickReadUserData } from './fireBaseApi';
 import ref from './Refs';
-import test from "./filmServiceApi";
+import dataFetch from "./filmServiceApi";
 import movieCardTpl from '../templates/fetchMovieTemplate.hbs';
 
 ref.BtnWatched.addEventListener('click', onClickReadDataFirebase);
@@ -16,7 +16,6 @@ function onClickReadDataFirebase(e) {
       ref.BtnQueue.classList.remove('active');
       const valueReadUserWatched= onCkickReadUserData( dataUser.accessToken, e.target.dataset.action, dataUser.uid,
       )
-      console.log(valueReadUserWatched)
       ref.galleryRef.innerHTML = '';
       valueReadUserWatched.then(value => {
          if (value === null) {
@@ -29,7 +28,7 @@ else{
   values
     .filter((course, index, array) => array.indexOf(course) === index)
     .map(e => {
-      test.fetchFilmByID(e).then(result => {
+      dataFetch.fetchFilmByID(e).then(result => {
         renderMovieCard(result);
       });
     });
@@ -54,7 +53,7 @@ else{
         let values = Object.values(value);
         values.filter((value, index, array) => array.indexOf(value) === index)
           .map(e => {
-            test.fetchFilmByID(e).then(result => {
+            dataFetch.fetchFilmByID(e).then(result => {
               renderMovieCard(result);
             });
           });
