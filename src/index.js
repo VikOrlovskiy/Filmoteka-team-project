@@ -6,8 +6,6 @@ import './js/Refs';
 import './js/userFunctions';
 import './js/serchFilmByValue';
 import './js/renderUserLibrary';
-// ==========Document Auth=========
-// import "./js/fireBaseApi";
 // ==========Document MAIN========
 import './js/gallery';
 import './js/paginationGallery';
