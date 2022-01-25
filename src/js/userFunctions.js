@@ -1,11 +1,9 @@
 import { authWithEmailAndPassword, RegistrationWithEmailAndPassword,logOutAuthUser,authState,readUserData,writeUserData} from "./fireBaseApi";
-import ref from "./refs";
 import {actionPopUp} from './actionPopUp'
 import formLogIn from '../templates/formLogIn.hbs';
 import formRegistration from '../templates/formRegistration.hbs';
 import Notiflix from 'notiflix';
-
-console.log(ref)
+import ref from "./refs";
 // ==================logOut========================
 ref.logOutButton.addEventListener('click' , logOutAuthUser)
 // ==================LogIn========================
