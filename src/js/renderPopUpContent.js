@@ -51,6 +51,8 @@ function onClickWriteDataFirebase(e){
       for (let i = 0; i < userFilmDataWatchedValues.length; i +=1) {
         if(userFilmDataWatchedValues[i] === e.target.parentNode.id){
           onCkickRemoveUserData(dataUser.accessToken,'Watched',userFilmDataWatchedKeys[i],dataUser.uid)
+          ref.popUp.innerHTML="" ;
+          document.body.classList.remove('show-modal');
         }
       }
       e.target.disabled = true;
