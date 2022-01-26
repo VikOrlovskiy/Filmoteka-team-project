@@ -10,7 +10,7 @@ import './js/renderUserLibrary';
 import './js/gallery';
 import './js/paginationGallery';
 import './js/renderPopUpContent';
-import './js/loader';
-import './js/firebaseDataWork'
+// import './js/loader';
+import './js/firebaseDataWork';
 // ==========Document FOOTER=========
-import "./js/footerModal";
+import './js/footerModal';
