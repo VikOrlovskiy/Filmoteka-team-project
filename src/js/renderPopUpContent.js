@@ -1,10 +1,11 @@
 import ref from './Refs.js';
 import filmCard from '../templates/card.hbs';
 import userLibraryFilmCard from '../templates/userLibraryFilmCard.hbs';
+import movieCardTpl from '../templates/fetchMovieTemplate.hbs';
 import Notiflix from 'notiflix';
 import dataFetch from "./filmServiceApi";
 import { actionPopUp } from './actionPopUp';
-import { onCkickWriteUserData ,onCkickRemoveUserData} from './fireBaseApi';
+import { onCkickWriteUserData ,onCkickRemoveUserData,onCkickReadUserData} from './fireBaseApi';
 
  ref.gallery.addEventListener('click', onOpenPopUp);
 
@@ -51,9 +52,8 @@ function onClickWriteDataFirebase(e){
       let userFilmDataWatchedKeys = Object.keys(JSON.parse(localStorage.getItem('Watched')));
       for (let i = 0; i < userFilmDataWatchedValues.length; i +=1) {
         if(userFilmDataWatchedValues[i] === e.target.parentNode.id){
-          onCkickRemoveUserData(dataUser.accessToken,'Watched',userFilmDataWatchedKeys[i],dataUser.uid)
-          ref.popUp.innerHTML="" ;
-          document.body.classList.remove('show-modal');
+          deliteAndReadFilms(dataUser.accessToken,'Watched',userFilmDataWatchedKeys[i],dataUser.uid)
+          // onCkickRemoveUserData(dataUser.accessToken,'Watched',userFilmDataWatchedKeys[i],dataUser.uid)
         }
       }
       e.target.disabled = true;
@@ -65,7 +65,7 @@ function onClickWriteDataFirebase(e){
       let userFilmDataQueueKeys = Object.keys(JSON.parse(localStorage.getItem('queue')));
       for (let i = 0; i < userFilmDataQueueValues.length; i +=1) {
         if(userFilmDataQueueValues[i] === e.target.parentNode.id){
-          onCkickRemoveUserData(dataUser.accessToken,'queue',userFilmDataQueueKeys[i],dataUser.uid)
+          deliteAndReadFilms(dataUser.accessToken,'queue',userFilmDataQueueKeys[i],dataUser.uid)
         }
       }
       e.target.disabled = true;
@@ -82,3 +82,38 @@ function onClickWriteDataFirebase(e){
 e.target.disabled = true;}
 
 }
+async function deliteAndReadFilms (accessToken,categoryName,userFilmDataWatchedKeys,uid){
+  let deliteFilm = await onCkickRemoveUserData(accessToken,categoryName,userFilmDataWatchedKeys,uid)
+  let loadRestFilm = await onCkickReadUserData( accessToken, categoryName, uid,)
+  if(!loadRestFilm){
+    ref.galleryRef.innerHTML = `<li class="text-error">
+    <p>You don't have any movies added yet.</p></li>`;
+    ref.popUp.innerHTML="" ;
+    document.body.classList.remove('show-modal');
+    return
+  }
+  console.log(loadRestFilm)
+  let values = Object.values(loadRestFilm);
+  values.map(e => {
+      dataFetch.fetchFilmByID(e).then(result => {
+        renderMovieCard(result);
+      });
+    });
+  ref.galleryRef.innerHTML = '';
+  ref.popUp.innerHTML="" ;
+  document.body.classList.remove('show-modal');
+}
+function renderMovieCard(e) {
+  e.release_date = e.release_date.slice(0, 4)
+ e.genres = ganreElement(e.genres) 
+  ref.galleryRef.insertAdjacentHTML('afterbegin',movieCardTpl(e));
+}
+
+const ganreElement = (e) => {
+ if(e.length===0) {
+  return `Unknown`;
+ }
+ else {
+  return e.map(id => id.name).slice(0,2);}
+}
+  
