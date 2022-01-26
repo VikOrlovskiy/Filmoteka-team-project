@@ -22,15 +22,16 @@ async function onOpenPopUp(e) {
     return;
   }
 }
-
 // fuction renderFilmCard by Id
 function renderFilmCard(data) {
+  const  {original_title , poster_path ,vote_average,vote_count,popularity,genres,overview,id} = data
+  let rounded = Math.round(popularity * 10) / 10
   if(ref.headerContainer.classList.contains('header__container--library')){
-  ref.popUp.insertAdjacentHTML('beforeend', `${userLibraryFilmCard(data)}`);
+  ref.popUp.insertAdjacentHTML('beforeend', userLibraryFilmCard({rounded,poster_path,original_title,vote_average,original_title,genres,overview,id,vote_count}));
   document.querySelector('.film-detail__btns').addEventListener('click', onClickWriteDataFirebase)
   return  
 }
-  ref.popUp.insertAdjacentHTML('beforeend', `${filmCard(data)}`);
+  ref.popUp.insertAdjacentHTML('beforeend', filmCard({rounded,poster_path,original_title,vote_average,original_title,genres,overview,id,vote_count}));
   document.querySelector('.film-detail__btns').addEventListener('click', onClickWriteDataFirebase)
 }
 // ================firebase writeUserData=====================

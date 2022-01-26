@@ -70,6 +70,7 @@
   }
   
   .film-detail__item--value {
+    // display: flex;
     // position: absolute;
     // left: 50%;
     // display: flex;
@@ -130,4 +131,14 @@
     color: $lite-text-color;
     background: $acent-Bg-color;
     border: 1px solid $acent-Bg-color;
+  }
+  .film-detail__item--voise{
+    border-radius: 5px;
+    margin-left: 3px;
+    padding: 1px 4px;
+    background-color: $footer-Bg-color;
+    color: $primary-text-color;
+  }
+  .film-detail--flex{
+    display: flex;
   }
