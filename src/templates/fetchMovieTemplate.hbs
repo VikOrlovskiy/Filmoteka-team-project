@@ -3,14 +3,14 @@
     <div class="gallery__card-thumb">
          {{#if poster_path}}
           <img
-            class="gallery__image"
+            class="gallery__image lazyload"
             src='https://image.tmdb.org/t/p/w500{{poster_path}}'
             loading="lazy"
             alt='{{original_title}}'
           /> 
            {{else}}
           <img
-            class="gallery__image"
+            class="gallery__image lazyload"
             src='https://raw.githubusercontent.com/VikOrlovskiy/Filmoteka-team-project/main/src/images/icons/poster.png'
             alt='no_poster'
           />
